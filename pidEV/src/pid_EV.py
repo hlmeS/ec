@@ -192,13 +192,6 @@ def fitness(pop, simout, weights):
 
     return J
 
-
-def orgIze(genotype):
-    """ given a genotype population, return the
-        fitness of the popoulation and the population itself
-    """
-    return np.column_stack(genotype, fitness(genotype))
-
 def recombine(pop, recomb_rate):
     """
     Recombination of parent population to create
@@ -250,8 +243,7 @@ def mutate(pop, mut_rate, oper, step, min_k, max_k):
 def select(parent, Jparent, children, Jchildren, iter):
     """
 
-    given a genotype, create a mutation and return
-        the fittest ones
+    select the fittest population from the parent and offspring
     """
 
     psize = len(parent[:,0])
