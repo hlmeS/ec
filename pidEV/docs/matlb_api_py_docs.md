@@ -15,10 +15,11 @@ eng.pid_script(300, 350, 50, nargout = 0)
 eng.workspace['Y']
 
 output = eng.pid_step(350, 300, 50), stdout=out, stderr=err)
+np.asarray(output)
 ```
 
 
-```
+``` matlab
 % Matlab :
 t = 0:0.01:5;
 sys = tf(1, [1 10 20]);

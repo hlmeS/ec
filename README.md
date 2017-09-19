@@ -3,7 +3,7 @@
 # Project 1: PID Tuning using GA
 
 **Summary**:
-The objective of this project was to tune the PID gains of a mass-spring-damper system (textbook example!) using a genetic algorithm (GA) approach.
+The objective of ths project was to tune the PID gains of a mass-spring-damper system (textbook example!) using a genetic algorithm (GA) approach.
 
 
 **Directory**: [/pidEV](pidEV/)
