@@ -328,13 +328,50 @@ def select(parent, Jparent, children, Jchildren, iter):
     return selection
 ```
 
-### Evotuion Parameters
 
-To run the evolutionary process, one can simply set the configuration parameters as shown in Figure 9 below and run the each step of the process for a desired number of iterations. A more appropriate stopping criterion should be considered in future implementations.
+
+
+
+## GA Testing
+
+To run the evolutionary process and test the algorithms performance, one can simply set the configuration parameters, shown in Figure 9 below, and run each step of the EV process for a desired number of iterations. A more appropriate stopping criterion should be considered in future implementations.
+
+Table 1-3 summarizes some of the tested parameters.
+
+**Table 1:** Varying the number of genes and spread factor with 20 iterations.
+
+| Seed   | # of Genes | Spread  |
+| ------ |:----------:| -------:|
+| 1023   | 5          |   10    |
+| 1023   | 10         |   10    |
+| 1023   | 20         |   10    |
+| 1023   | 10         |   100   |
+
+**Table 2:** Varying the Gaussian step size, recomb_rate, and mut_rate
+
+| Step   | Recomb_rate | Mut_rate |
+| ------ |:-----------:| ---------:|
+| 1      | 0.5         |   0.3    |
+| 10     | 0.5         |   0.3    |
+| 20     | 0.5         |   0.3   |
+| 20     | 0.1         |   0.3   |
+| 20     | 0.5         |   0.6   |
+
+**Table 3:** Varying the number of genes and spread factor with 20 iterations.
+
+| Seed   | # of Genes | Spread  |
+| ------ |:----------:| -------:|
+| 1023   | 5          |   10    |
+| 1023   | 10         |   10    |
+| 1023   | 20         |   10    |
+| 1023   | 10         |   100   |
+| 1023   | 10         |   100   |
+| 1023   | 10         |   100   |
+
 
 **Figure 9:** Running the EV process.
 
-```python 
+```python
 def run_EV():
     """ runs the ev and plots fitness at each run ...
         optionally set debug = true and print the
@@ -418,8 +455,8 @@ def run_EV():
         if iter == 0.5*max_iter:
             simout_mid = simout
 
-    plot_simout(simout_init, simout_mid, simout, "results/simout.png")
-    plot_aveFitness(Jave, "results/objective.png")
+    plot_simout(simout_init, simout_mid, simout, "sim_results/simout.png")
+    plot_aveFitness(Jave, "sim_results/objective.png")
     print 'Fintal pop: ', pop
     print 'Final J: ', Jp
     print 'Jave: ', Jave
@@ -427,7 +464,6 @@ def run_EV():
     print 'simout: ' , simout[0][:][:]
 ```
 
-## GA Testing
 
 ## Results
 

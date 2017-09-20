@@ -361,8 +361,8 @@ def run_EV():
     """
 
     #initial population
-    genes = 20           # 5 parents
-    seed = np.random.randint(1,1000)         # random number seed
+    genes = 10           # 5 parents
+    seed = 1023         # random number seed
     factor = 10       # initial guess spread
     max_iter = 20      # max iterations
 
@@ -378,10 +378,10 @@ def run_EV():
 
     # variation operators
     recomb_rate = 0.5
-    mut_rate = 0.3
+    mut_rate = 0.6
     mut_oper = "gaussian"
     mut_step = 30
-    alpha = 0.98
+    alpha = 1.0
 
     # init matlab connection, just one until parallelized
     eng = matlab_init(1)
@@ -437,8 +437,8 @@ def run_EV():
         if iter == 0.5*max_iter:
             simout_mid = simout
 
-    plot_simout(simout_init, simout_mid, simout, "results/simout.png")
-    plot_aveFitness(Jave, "results/objective.png")
+    plot_simout(simout_init, simout_mid, simout, "../sim_results/simout_30s5r6m.png")
+    plot_aveFitness(Jave, "../sim_results/objective_30s5r6m.png")
     print 'Fintal pop: ', pop
     print 'Final J: ', Jp
     print 'Jave: ', Jave
