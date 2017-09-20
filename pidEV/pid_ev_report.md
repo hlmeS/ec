@@ -1,7 +1,5 @@
 # PID-Tuning using Evolutionary Computation
 
-## Abstract
-
 ## Introduction
 ### Motivation
 
@@ -14,7 +12,7 @@ In bridging the disciplines of evolutionary computation and control engineering,
 
 ### Model
 
-The model system chosen is that of a classical mass-spring-damper, as illustrated in Figure 1. A mass of mass _m_ is attached to a wall with a spring with spring constant _m_ and a damper with damping coefficient _c_. A force _F_ is then applied to displace the block in its horizontal position. The dynamics of the system can simply be described in the time domain as `f(t) = m x''(t) + c mx'(t) + k(x) ` or by its transfer function `P(s) = F(s)/X(s) = 1 / (ms^2 + cs + k )`. The variables _m_, _c_, and _k_ were chosen as `1 kg`, `20 Ns/m`, and `10 N/m` respectively.
+The model system chosen is that of a classical mass-spring-damper, as illustrated in Figure 1. A mass of mass _m_ is attached to a wall with a spring with spring constant _m_ and a damper with damping coefficient _c_. A force _F_ is then applied to displace the block in its horizontal position. The dynamics of the system can simply be described in the time domain as `f(t) = m x''(t) + c mx'(t) + kx(t) ` or by its transfer function `P(s) = F(s)/X(s) = 1 / (ms^2 + cs + k )`. The variables _m_, _c_, and _k_ were chosen as `1 kg`, `20 Ns/m`, and `10 N/m` respectively.
 
 ![Figure 1](figures/spring_damper_fbd.png)
 
@@ -22,7 +20,7 @@ The model system chosen is that of a classical mass-spring-damper, as illustrate
 
 ### PID Controller
 
-In this project, a PID-controller was considered for feedback control system with unary feedback signal shown in Figure 2. The plant model is the aforementioned mass-spring-damper system. The controller can be described as `u(t) = Kp * e(t) + Ki \int e(t)dt + Kp de(t)/dt` in the time domain or as `C(s) = Kp + 1/s  Ki + s Kd` in its trasnfer form [see 4,5].
+In this project, a PID-controller was considered for the feedback control system with unary feedback signal shown in Figure 2. The plant model is the aforementioned mass-spring-damper system. The controller can be described as `u(t) = Kp * e(t) + Ki \int e(t)dt + Kp de(t)/dt` in the time domain or as `C(s) = Kp + 1/s  Ki + s Kd` in its transfer form [see 4,5].
 
 
 ![Figure 2](figures/feedback_block.png)
@@ -31,7 +29,7 @@ In this project, a PID-controller was considered for feedback control system wit
 
 ### Simulation Engine
 
-The above model and controller were modeled and simulated using the MATLAB script described in Listing 1. The script takes the three control gain, and system inputs _u_ and _t_ as its inputs, then models the plant, _G_, the controller, _C_, and the overall system, _T_, and ultimately simulates and returns the _T_'s response to the input (_u_, _t_), where _t_ is a time series and _u_ the reference point.
+The above model and controller were modeled and simulated using the MATLAB script described in Listing 1. The script takes the three control gains, and system inputs _u_ and _t_ as its inputs, then models the plant, _G_, the controller, _C_, and the overall system, _T_, and ultimately simulates and returns the _T_'s response to the input (_u_, _t_), where _t_ is a time series and _u_ the reference point vector.
 
 **Listing 1:** MATLAB code for model simulation.
 ``` c
@@ -49,10 +47,10 @@ resp = [y, t];
 
 ## GA Design & Implementation
 
-A genetic search approach was taken to tune the PID control gains of the aforementioned system. The algorithm was broken down by its search space and representation, the objective function, the variation operator, the recombination method, and the selection method. Each aspect of the algorithm is described in the following in terms of design and Python implementation.
+A genetic search approach was taken to tune the PID control gains of the dynamical system. The algorithm was broken down by its search space and representation, the objective function, the variation operator, the recombination method, and the selection method. Each aspect of the algorithm is described in the following in terms of design and Python implementation.
 
 ### Search Space and Representation
-The search space, _S_, is comprised of the three control gain, _Kp_, _Ki_, and _Kd_, each of which can be described as a real number on the interval `I = [lower limit, upper limit]`. As shown in Listing 3, the control gains, _chromosomes_, for each _gene_ in the population of size `size` is drawn at random from a distribution generated with some initial `seed`.  
+The search space, _S_, is comprised of the three control gains, _Kp_, _Ki_, and _Kd_, each of which can be described as a real number on the interval `I = [lower limit, upper limit]`. As shown in Listing 3, the control gains, _chromosomes_, for each _gene_ in the population of size `size` is drawn at random from a distribution generated with some initial `seed`.  
 
 **Listing 3:** Initialization of the population.
 ```python
@@ -90,7 +88,7 @@ The fitness of a gene can then be calculated as
 `J = w1 ISE + w2 * IAE + w3 * ITAE `, where `\Sum_{i=1}^3 wi = 1`.
 
 
-The [MATLAB Engine API for Python](https://www.mathworks.com/help/matlab/matlab-engine-for-python.html?nocookie=true) was used to call the MATLAB script from within python, as shown in Listing 4 below. The error and fitness calculation can be seen in Listing 5.
+The [MATLAB Engine API for Python](https://www.mathworks.com/help/matlab/matlab-engine-for-python.html?nocookie=true) was used to call the MATLAB script from within Python, as shown in Listing 4 below. The error and fitness calculation can be seen in Listing 5.
 
 **Listing 4:** Reference for using the MATLAB Engine API in Python
 
@@ -334,9 +332,9 @@ def select(parent, Jparent, children, Jchildren, iter):
 
 ## GA Testing
 
-To run the evolutionary process and test the algorithms performance, one can simply set the configuration parameters, shown in Figure 9 below, and run each step of the EV process for a desired number of iterations. A more appropriate stopping criterion should be considered in future implementations.
+To run the evolutionary process and test the algorithms performance, one can simply set the configuration parameters, shown in  Listing 9 below, and run each step of the EV process for a desired number of iterations. A more appropriate stopping criterion should be considered in future implementations.
 
-Table 1-3 summarizes some of the tested parameters.
+Table 1-2 summarize some of the tested parameters.
 
 **Table 1:** Varying the number of genes and spread factor with 20 iterations.
 
@@ -353,20 +351,10 @@ Table 1-3 summarizes some of the tested parameters.
 | ------ |:-----------:| ---------:|
 | 1      | 0.5         |   0.3    |
 | 10     | 0.5         |   0.3    |
-| 20     | 0.5         |   0.3   |
-| 20     | 0.1         |   0.3   |
-| 20     | 0.5         |   0.6   |
+| 30     | 0.5         |   0.3   |
+| 30     | 0.1         |   0.3   |
+| 30     | 0.5         |   0.6   |
 
-**Table 3:** Varying the number of genes and spread factor with 20 iterations.
-
-| Seed   | # of Genes | Spread  |
-| ------ |:----------:| -------:|
-| 1023   | 5          |   10    |
-| 1023   | 10         |   10    |
-| 1023   | 20         |   10    |
-| 1023   | 10         |   100   |
-| 1023   | 10         |   100   |
-| 1023   | 10         |   100   |
 
 
 **Figure 9:** Running the EV process.
@@ -467,7 +455,44 @@ def run_EV():
 
 ## Results
 
+Below are the test results for the in Tables 1-2 described conditions.
+
+### Table 1  
+![Figure 3a](sim_results/simout_1023s5g10f.png) ![Figure 3a](sim_results/objective_1023s5g10f.png)
+**Figure 3:** Seed: 1023, Genes:	5, Spread: 10
+
+![Figure 4a](sim_results/simout_1023s10g10f.png) ![Figure 4b](sim_results/objective_1023s10g10f.png)
+**Figure 4:** Seed: 1023, Genes:	10, Spread: 10
+
+![Figure 5a](sim_results/simout_1023s20g10f.png) ![Figure 5b](sim_results/objective_1023s20g10f.png)
+**Figure 5:** Seed: 1023, Genes:	20, Spread: 10
+
+![Figure 6a](sim_results/simout_1023s10g100f.png) ![Figure 6b](sim_results/objective_1023s10g100f.png)
+**Figure 6:** Seed: 1023, Genes:	10, Spread: 100
+
+
+
+### Table 2
+![Figure 6a](sim_results/simout_1s5r3m.png) ![Figure 6b](sim_results/objective_1s5r3m.png)
+**Figure 7:** Step: 1, Recombination: 0.5, Mutation: 0.3
+
+![Figure 6a](sim_results/simout_10s5r3m.png) ![Figure 6b](sim_results/objective_10s5r3m.png)
+**Figure 8:** Step: 10, Recombination: 0.5, Mutation: 0.3
+
+![Figure 6a](sim_results/simout_30s5r3m.png) ![Figure 6b](sim_results/objective_30s5r3m.png)
+**Figure 9:** Step: 30, Recombination: 0.5, Mutation: 0.3
+
+![Figure 6a](sim_results/simout_30s1r3m.png) ![Figure 6b](sim_results/objective_30s1r3m.png)
+**Figure 10:** Step: 30, Recombination: 0.1, Mutation: 0.3
+
+![Figure 6a](sim_results/simout_30s5r6m.png) ![Figure 6b](sim_results/objective_30s5r6m.png)
+**Figure 11:** Step: 30, Recombination: 0.5, Mutation: 0.6
+
+
 ## Conclusion and Future workspace
+Preliminary results showed that an evolutionary approach to PID tuning was achieved. More investigation needs however to be done to determine the governing factors in the algorithms outcome. Further response characteristics, e.g. peak time, percent overshoot, settling time, should be considered to be included in the fitness objective function.
+
+
 
 ## Rerefences
 
