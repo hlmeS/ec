@@ -10,4 +10,4 @@ The objective of ths project was to tune the PID gains of a mass-spring-damper s
 
 l**Report**: [Mini Case Report](pidEV/pid_ev_report.md)
 
-**Presentation**: [Mini Case Presentation](pidEv/PITCHME.md)
+**Presentation**: [Mini Case Presentation](PITCHME.md)
