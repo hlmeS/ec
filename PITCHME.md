@@ -332,39 +332,47 @@ def run_EV():
 +++
 
 ![Figure 3a](pidEV/sim_results/simout_1023s5g10f.png)
+
 **Figure 3:** Seed: 1023, Genes:	5, Spread: 10
 +++
 
 ![Figure 3a](pidEV/sim_results/objective_1023s5g10f.png)
+
 **Figure 3:** Seed: 1023, Genes:	5, Spread: 10
 
 +++
 
 ![Figure 4a](pidEV/sim_results/simout_1023s10g10f.png)
+
 **Figure 4:** Seed: 1023, Genes:	10, Spread: 10
 
 +++
 
 ![Figure 4b](pidEV/sim_results/objective_1023s10g10f.png)
+
 **Figure 4:** Seed: 1023, Genes:	10, Spread: 10
 
 +++
 
 ![Figure 5a](pidEV/sim_results/simout_1023s20g10f.png)
+
 **Figure 5:** Seed: 1023, Genes:	20, Spread: 10
 +++
 
 ![Figure 5b](pidEV/sim_results/objective_1023s20g10f.png)
+
 **Figure 5:** Seed: 1023, Genes:	20, Spread: 10
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_1023s10g100f.png)
+
 **Figure 6:** Seed: 1023, Genes:	10, Spread: 100
 
 +++
 
 ![Figure 6b](pidEV/sim_results/objective_1023s10g100f.png)
+
 **Figure 6:** Seed: 1023, Genes:	10, Spread: 100
 
 
@@ -385,48 +393,58 @@ def run_EV():
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_1s5r3m.png)
+
 **Figure 7:** Step: 1, Recombination: 0.5, Mutation: 0.3
 +++
 
 ![Figure 6b](pidEV/sim_results/objective_1s5r3m.png)
+
 **Figure 7:** Step: 1, Recombination: 0.5, Mutation: 0.3
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_10s5r3m.png)
+
 **Figure 8:** Step: 10, Recombination: 0.5, Mutation: 0.3
 
 +++
 
 ![Figure 6b](pidEV/sim_results/objective_10s5r3m.png)
+
 **Figure 8:** Step: 10, Recombination: 0.5, Mutation: 0.3
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_30s5r3m.png)
+
 **Figure 9:** Step: 30, Recombination: 0.5, Mutation: 0.3
 +++
 
 ![Figure 6b](pidEV/sim_results/objective_30s5r3m.png)
+
 **Figure 9:** Step: 30, Recombination: 0.5, Mutation: 0.3
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_30s1r3m.png)
+
 **Figure 10:** Step: 30, Recombination: 0.1, Mutation: 0.3
 
 +++
 ![Figure 6b](pidEV/sim_results/objective_30s1r3m.png)
+
 **Figure 10:** Step: 30, Recombination: 0.1, Mutation: 0.3
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_30s5r6m.png)
+
 **Figure 11:** Step: 30, Recombination: 0.5, Mutation: 0.6
 
 +++
 
 ![Figure 6b](pidEV/sim_results/objective_30s5r6m.png)
+
 **Figure 11:** Step: 30, Recombination: 0.5, Mutation: 0.6
 
 
