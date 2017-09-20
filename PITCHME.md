@@ -55,7 +55,7 @@ resp = [y, t];
 
 ---
 
-## GA Design & Implementation
+## Design & Implementation
 
 * search space and representation
 * the objective function
@@ -82,7 +82,7 @@ resp = [y, t];
 
 The fitness of a gene can then be calculated as
 
-`J = w1 ISE + w2 * IAE + w3 * ITAE `, where `\Sum_{i=1}^3 wi = 1`.
+`J = w1 * ISE + w2 * IAE + w3 * ITAE `, where `\Sum_{i=1}^3 wi = 1`.
 
 +++
 
