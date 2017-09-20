@@ -397,3 +397,17 @@ def run_EV():
 - evolutionary approach and implementation is **promising**
 - needs more testing for **governing factors**
 - apply to problems with **delays** and **unknown dynamics**
+
+---
+
+## References
+
+[1.] L. Altenberg, "ICS674 - Evolutionary Computation". Class Presentation. 2017.
+
+[2.] K. De Jong. "Evolutionary Computation: a unified approach". MIT Press. 2006
+
+[3.] A. Jayachitra and R. Vinodha, “Genetic Algorithm Based PID Controller Tuning Approach for Continuous Stirred Tank Reactor,” Advances in Artificial Intelligence, vol. 2014, Article ID 791230, 8 pages, 2014. doi:10.1155/2014/791230
+
+[4.] [Introduction: PID Controller Design, Control Tutorial](http://ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlPID)
+
+[5.] [Extras: Generating a Step Response in MATLAB, Control Tutorial](http://ctms.engin.umich.edu/CTMS/index.php?aux=Extras_step)
