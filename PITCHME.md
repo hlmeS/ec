@@ -381,12 +381,14 @@ def run_EV():
 
 +++
 
-![Figure 6a](pidEV/sim_results/simout_30s1r3m.png) ![Figure 6b](pidEV/sim_results/objective_30s1r3m.png)
+![Figure 6a](pidEV/sim_results/simout_30s1r3m.png)
+![Figure 6b](pidEV/sim_results/objective_30s1r3m.png)
 **Figure 10:** Step: 30, Recombination: 0.1, Mutation: 0.3
 
 +++
 
-![Figure 6a](pidEV/sim_results/simout_30s5r6m.png) ![Figure 6b](pidEV/sim_results/objective_30s5r6m.png)
+![Figure 6a](pidEV/sim_results/simout_30s5r6m.png)
+![Figure 6b](pidEV/sim_results/objective_30s5r6m.png)
 **Figure 11:** Step: 30, Recombination: 0.5, Mutation: 0.6
 
 
