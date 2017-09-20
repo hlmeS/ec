@@ -562,7 +562,7 @@ def run_EV():
 - needs more testing for **governing factors**
 - apply to problems with **delays** and **unknown dynamics**
 
-[Source code & report: https://github.com/hlmes/ec/pidEV](https://github.com/hlmes/ec/pidEV)
+#### Source code & report: [https://github.com/hlmeS/ec/tree/master/pidEV](https://github.com/hlmeS/ec/tree/master/pidEV)
 
 ---
 
