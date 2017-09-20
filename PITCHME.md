@@ -8,7 +8,7 @@
 The goal is to model a dynamical system and evolve the PID gains to control the system.
 
 
----
++++
 
 ## Model
 
@@ -562,7 +562,10 @@ def run_EV():
 - needs more testing for **governing factors**
 - apply to problems with **delays** and **unknown dynamics**
 
-#### Source code & report: [https://github.com/hlmeS/ec/tree/master/pidEV](https://github.com/hlmeS/ec/tree/master/pidEV)
+
+#### Source code & report:
+
+[https://github.com/hlmeS/ec/tree/master/pidEV](https://github.com/hlmeS/ec/tree/master/pidEV)
 
 ---
 
