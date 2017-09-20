@@ -331,22 +331,40 @@ def run_EV():
 
 +++
 
-![Figure 3a](pidEV/sim_results/simout_1023s5g10f.png) ![Figure 3a](pidEV/sim_results/objective_1023s5g10f.png)
+![Figure 3a](pidEV/sim_results/simout_1023s5g10f.png)
+**Figure 3:** Seed: 1023, Genes:	5, Spread: 10
++++
+
+![Figure 3a](pidEV/sim_results/objective_1023s5g10f.png)
 **Figure 3:** Seed: 1023, Genes:	5, Spread: 10
 
 +++
 
-![Figure 4a](pidEV/sim_results/simout_1023s10g10f.png) ![Figure 4b](pidEV/sim_results/objective_1023s10g10f.png)
+![Figure 4a](pidEV/sim_results/simout_1023s10g10f.png)
 **Figure 4:** Seed: 1023, Genes:	10, Spread: 10
 
 +++
 
-![Figure 5a](pidEV/sim_results/simout_1023s20g10f.png) ![Figure 5b](pidEV/sim_results/objective_1023s20g10f.png)
+![Figure 4b](pidEV/sim_results/objective_1023s10g10f.png)
+**Figure 4:** Seed: 1023, Genes:	10, Spread: 10
+
++++
+
+![Figure 5a](pidEV/sim_results/simout_1023s20g10f.png)
+**Figure 5:** Seed: 1023, Genes:	20, Spread: 10
++++
+
+![Figure 5b](pidEV/sim_results/objective_1023s20g10f.png)
 **Figure 5:** Seed: 1023, Genes:	20, Spread: 10
 
 +++
 
-![Figure 6a](pidEV/sim_results/simout_1023s10g100f.png) ![Figure 6b](pidEV/sim_results/objective_1023s10g100f.png)
+![Figure 6a](pidEV/sim_results/simout_1023s10g100f.png)
+**Figure 6:** Seed: 1023, Genes:	10, Spread: 100
+
++++
+
+![Figure 6b](pidEV/sim_results/objective_1023s10g100f.png)
 **Figure 6:** Seed: 1023, Genes:	10, Spread: 100
 
 
@@ -366,28 +384,48 @@ def run_EV():
 
 +++
 
-![Figure 6a](pidEV/sim_results/simout_1s5r3m.png) ![Figure 6b](pidEV/sim_results/objective_1s5r3m.png)
+![Figure 6a](pidEV/sim_results/simout_1s5r3m.png)
+**Figure 7:** Step: 1, Recombination: 0.5, Mutation: 0.3
++++
+
+![Figure 6b](pidEV/sim_results/objective_1s5r3m.png)
 **Figure 7:** Step: 1, Recombination: 0.5, Mutation: 0.3
 
 +++
 
-![Figure 6a](pidEV/sim_results/simout_10s5r3m.png) ![Figure 6b](pidEV/sim_results/objective_10s5r3m.png)
+![Figure 6a](pidEV/sim_results/simout_10s5r3m.png)
 **Figure 8:** Step: 10, Recombination: 0.5, Mutation: 0.3
 
 +++
 
-![Figure 6a](pidEV/sim_results/simout_30s5r3m.png) ![Figure 6b](pidEV/sim_results/objective_30s5r3m.png)
+![Figure 6b](pidEV/sim_results/objective_10s5r3m.png)
+**Figure 8:** Step: 10, Recombination: 0.5, Mutation: 0.3
+
++++
+
+![Figure 6a](pidEV/sim_results/simout_30s5r3m.png)
+**Figure 9:** Step: 30, Recombination: 0.5, Mutation: 0.3
++++
+
+![Figure 6b](pidEV/sim_results/objective_30s5r3m.png)
 **Figure 9:** Step: 30, Recombination: 0.5, Mutation: 0.3
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_30s1r3m.png)
+**Figure 10:** Step: 30, Recombination: 0.1, Mutation: 0.3
+
++++
 ![Figure 6b](pidEV/sim_results/objective_30s1r3m.png)
 **Figure 10:** Step: 30, Recombination: 0.1, Mutation: 0.3
 
 +++
 
 ![Figure 6a](pidEV/sim_results/simout_30s5r6m.png)
+**Figure 11:** Step: 30, Recombination: 0.5, Mutation: 0.6
+
++++
+
 ![Figure 6b](pidEV/sim_results/objective_30s5r6m.png)
 **Figure 11:** Step: 30, Recombination: 0.5, Mutation: 0.6
 
@@ -400,6 +438,8 @@ def run_EV():
 - needs more testing for **governing factors**
 - apply to problems with **delays** and **unknown dynamics**
 
+[Source code & report: https://github.com/hlmes/ec/pidEV](https://github.com/hlmes/ec/pidEV)
+
 ---
 
 ## References
@@ -408,8 +448,11 @@ def run_EV():
 
 [2.] K. De Jong. "Evolutionary Computation: a unified approach". MIT Press. 2006
 
++++
+
 [3.] A. Jayachitra and R. Vinodha, “Genetic Algorithm Based PID Controller Tuning Approach for Continuous Stirred Tank Reactor,” Advances in Artificial Intelligence, vol. 2014, Article ID 791230, 8 pages, 2014. doi:10.1155/2014/791230
 
++++
 [4.] [Introduction: PID Controller Design, Control Tutorial](http://ctms.engin.umich.edu/CTMS/index.php?example=Introduction&section=ControlPID)
 
 [5.] [Extras: Generating a Step Response in MATLAB, Control Tutorial](http://ctms.engin.umich.edu/CTMS/index.php?aux=Extras_step)
