@@ -219,6 +219,112 @@ def itae_calc(simout):
 * Mutation: Gaussian mutator
 * Selection: Truncation or fitness proportional
 
++++
+
+## Recombination
+```python
+
+def recombine(pop, recomb_rate):
+    """
+    Recombination of parent population to create
+    same number of offsprings as there are parents.
+    """
+    psize = len(pop[:,0])
+    idx = np.arange(psize).reshape(psize, 1)
+    offspring = np.concatenate((idx, np.zeros((psize, 3))), axis = 1)
+
+    for i in range(psize):
+        if float(np.random.random(1) < recomb_rate):
+            offspring[i] = pop[i]
+        else :
+            parent1 = pop[i]
+            #print 'parent1: ', parent1
+            parent2 = pop[np.random.randint(0, psize)]
+            #print 'parent2: ', parent2
+            XO_pt = np.random.randint(1, 3)
+            for j in range(1, 4):
+                #print 'xo-pt / j: ', XO_pt, j
+                offspring[i,j] = parent1[j] if j<= XO_pt else parent2[j]
+            #print 'offspring: ', offspring[i]
+
+    return offspring
+```
+
+
++++
+## Mutation
+
+```python
+
+def mutate(pop, mut_rate, oper, step, min_k, max_k):
+    """
+    Given a population, mutate each genotype stochastically using a
+    "gaussian" operator
+    "cauchy" operator  --- not yet
+    """
+
+    for i in range(len(pop[:,0])):
+        for j in range(1,4):
+            if float(np.random.random(1)) >= mut_rate:
+                if oper == "gaussian" :
+                    pop[i,j] += np.random.normal(0, step/math.sqrt(2.0/math.pi))
+                elif oper == "cauchy" :
+                    pop[i,j] += float(np.random.standard_cauchy(1))
+
+            if pop[i,j] > max_k:
+                pop[i,j] = max_k
+            elif pop[i,j] < min_k:
+                pop[i,j] = min_k
+
+    return pop
+```
++++
+
+## Selection
+
+```python
+def select(parent, Jparent, children, Jchildren, iter):
+    """
+
+    select the fittest population from the parent and offspring
+    """
+
+    psize = len(parent[:,0])
+    idx = np.arange(psize).reshape(psize, 1)
+    selection = np.concatenate((idx, np.zeros((psize, 3))), axis = 1)
+    #selection = np.empty([psize, 4])
+
+    CDF = np.empty([2*psize,1])
+    sampleP = np.empty([2*psize,1])
+
+    # all genomes, delete index
+    totalPop = np.delete(np.vstack((parent, children)), 0, axis=1)
+
+    # all objective function
+    totalJ = np.vstack((Jparent, Jchildren))
+    genomes = np.concatenate((totalJ, totalPop), axis =1 )
+    genomes = genomes[genomes[:,1].argsort()] # sort by fitness
+
+    #truncation
+    for i in range(psize):
+        selection[i][1:4] = genomes[i][2:5]
+
+    #proportional
+    '''
+    cumJ = np.sum(genomes[:,1])
+    for i in range(2*psize):
+        sampleP[i] = genomes[i,1] / cumJ
+        CDF[i] = sampleP[i] if i == 0 else (CDF[i-1]+sampleP[i])
+
+    for i in range(psize):
+        for k in range(2*psize):
+            if float(np.random.random(1)) > CDF[k]:
+                selection[i][1:4] = genomes[k][2:5]
+                break
+
+    '''
+    return selection
+```
 ---
 
 ## Running the Algorithm
