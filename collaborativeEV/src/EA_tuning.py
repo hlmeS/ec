@@ -196,11 +196,24 @@ def matlab_gensig(type, time, step):
     return (u, t)
     #return (np.concatenate((u,t), axis=1))
 
-def population_init(size, seed, spread):
+def temp_gensig(t_interval, t_low, t_high, iters):
+
+    temps = np.array
+    temps = np.linspace(t_low, t_high, t_steps)
+    if iters > t_steps and iters <= 2*t_steps:
+        currentTemp = np.concatenate((np.random.choice(temps, t_steps, replace=False), np.random.choice(temps, iters-t_steps, replace=False)))
+    else :
+        currentTemp = np.random.choice(temps, iters, replace=False)
+    print currentTemp
+    currentTemp = [60, 52, 56, 53, 58, 54]
+    startTime = datetime.datetime.now()  #+ datetime.timedelta(minutes=3)
+
+
+def population_rand_init(population_size, gene_size, random_seed, spread):
     """
     Generates a population as an array
-    with Kp, Ki, Kd as the columns and
-    'size' number of gene pairs.
+    with gene_size as the columns (e.g. gene_size = 3 for Kp, Ki, Kd )
+    and population_size as the number of genes in the population
 
     The 'seed' let's us control the seed for random number
     generation.
@@ -215,7 +228,14 @@ def population_init(size, seed, spread):
     genes = np.concatenate((idx, genes), axis = 1)
     return genes
 
-def ise_calc(simout):
+def population_gdb_init(population_size, env_params):
+    """
+    Find similar environmental parameters in the graph and
+    query respective genes.
+    """
+
+
+def fitness_ise_calc(simout):
     """
     Calculates the integral squared error of the timeseries
     output y with respect to the desired input u and delta t.
@@ -231,7 +251,7 @@ def ise_calc(simout):
 
     return ise
 
-def iae_calc(simout):
+def fitness_iae_calc(simout):
     """
     Calculates the integral absolute error of the timeseries
     output y with respect to the desired input u and delta t.
@@ -252,7 +272,7 @@ def iae_calc(simout):
 
     return iae
 
-def itae_calc(simout):
+def fitness_itae_calc(simout):
     """
     Calculates the integrated time absolute error of the timeseries
     output y with respect to the desired input r and delta t.
@@ -269,12 +289,20 @@ def itae_calc(simout):
 
     return itae
 
-def errfitness(pop, simout, weights):
+def fitness_energy_calc(simout):
+    """
+    Calculate the sum of the energy consumed during the
+    cooling interval.
+
+    """
+
+def fitness_eval(pop, simout, weights):
     """
     calculate the fitness for each gene in the population
     based on the objective functions:
 
-    J = w1 * ISE + w2 * IAE + w3 * itae,
+    J = w0 * Energy + (w1 * ISE + w2 * ITAE)
+
     where sum of w_i = 1
 
     Returns the fitness of each gene in nx2 matrix [idx, J]
@@ -333,7 +361,7 @@ def mutate(pop, mut_rate, oper, step, min_k, max_k):
     return pop
 
 
-def select(parent, Jparent, children, Jchildren, iter):
+def selection_truncate(parent, Jparent, children, Jchildren, iter):
     """
 
     select the fittest population from the parent and offspring
@@ -379,6 +407,12 @@ def select(parent, Jparent, children, Jchildren, iter):
 
     '''
     return selection
+
+def selection_sus(parent, Jparent, children, Jchildren, iter):
+    """
+    Stochastic Universal samplingTime
+    """
+
 
 def plot_fitness(xarr):
     """ given a range of genotypes, plot
