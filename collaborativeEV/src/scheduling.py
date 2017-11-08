@@ -8,9 +8,10 @@ from mysql.connector import MySQLConnection, Error
 from ConfigParser import ConfigParser
 import requests, urllib
 
+#PID2?tempset=53&Kp=1.8&Ki=0.1&Kd=0.1&valve_lower_limit=10&valve_upper_limit=120&valve_center=40&windup=20&sampletime=30&dcmultiplier=2
 def execRequest(tempset):
-    params = urllib.urlencode({'tempset': tempset, 'Kp': 7.0, 'valve_lower_limit': 10, 'valve_upper_limit': 255, 'valve_center': 35, 'dcmultiplier':2})
-    response = requests.get("http://deep.outtter.space:51880/kahuku_farms/PID_container2/?%s" % params, auth=('user', 'Mat5uda$$'))
+    params = urllib.urlencode({'tempset': tempset, 'Kp': 1.8, 'Ki': 0.1, 'Kd': 0.1, 'valve_lower_limit': 10, 'valve_upper_limit': 150, 'valve_center': 40, 'windup': 20, 'sampletime':30, 'dcmultiplier':2})
+    response = requests.get("http://deep.outtter.space:51880/ilaniwai/PID2?%s" % params, auth=('user', 'Mat5uda$$'))
     print response
 
 """
@@ -24,23 +25,26 @@ Inputs:
     t_steps - number of total temperature steps equally spaced
     iters - number of iterations to run this
 """
-def schedule(interval, t_low, t_high, t_steps, iters):
-    temps = np.linspace(t_low, t_high, t_steps)
+def schedule(interval, t_low, t_high, t_set):
+    #temps = np.linspace(t_low, t_high, t_steps)
+    temps = [t_high, t_low, t_high, t_set, t_low, t_set]
+    """
     if iters > t_steps and iters <= 2*t_steps:
         currentTemp = np.concatenate((np.random.choice(temps, t_steps, replace=False), np.random.choice(temps, iters-t_steps, replace=False)))
     else :
         currentTemp = np.random.choice(temps, iters, replace=False)
     print currentTemp
-    currentTemp = [60, 52, 56, 53, 58, 54]
+    """
+    #currentTemp = [60, 52, 56, 53, 58, 54]
     startTime = datetime.datetime.now()  #+ datetime.timedelta(minutes=3)
-    for i in range(iters):
+    for i in range(len(temps)):
         dt = i*interval
         nextTime = startTime + datetime.timedelta(minutes=dt)
         print "nextTime: " , nextTime
         pause.until(nextTime)
-        print "executing request with temp= ", currentTemp[i]
-        execRequest(currentTemp[i])
+        print "executing request with temp= ", temps[i]
+        execRequest(temps[i])
 
 if __name__ == '__main__':
-    schedule(30, 52, 60, 3, 6)
+    schedule(20, 50, 62, 53)
     execRequest(54)
