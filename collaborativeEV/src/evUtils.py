@@ -127,7 +127,7 @@ class ev_fitness:
         cooling interval.
 
         """
-        return np.sum(simout[:, 4])
+        return abs(np.sum(simout[:, 4]))
 
     def J_eval(self, i, k, simout):
         """
@@ -178,7 +178,7 @@ class ev_fitness:
                         if self.debug:
                             print nptime, simout
                             print self.J
-                        k += 1
+
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
@@ -196,7 +196,7 @@ class ev_fitness:
                         self.J_ave[i] = 20000
                         break
 
-
+                    k += 1
 
             """ get average fitness across all cooling cycles """
             self.J_ave[i] = np.mean(self.J[i, :])
@@ -228,7 +228,7 @@ class ev_operators:
         self.gain_limits = np.array([[0.1, 15], [0.0, 5.0], [0.0, 5.0]])
         #self.alpha = 1.0self.recomb_rate
 
-        self.fit_weights = [0.4, 0.3, 0.3]    # energy, ise, itae
+        self.fit_weights = [0.6, 0.3, 0.1]    # energy, ise, itae
 
         self.parents = self.pop_rand_init()
         self.children = np.zeros((np.shape(self.parents)))
