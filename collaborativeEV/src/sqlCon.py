@@ -18,8 +18,7 @@ import datetime
 import mysql.connector
 from mysql.connector import MySQLConnection, Error
 from ConfigParser import ConfigParser
-import requests
-import urllib
+
 
 class sqlCon:
 
@@ -100,24 +99,34 @@ class sqlCon:
         cursor = conn.cursor()
 
         # OLD query
-        query = ("Select timestamp, tempSet, tempActual FROM measurement "
-                 "WHERE deviceID=3 and containerID = 4 and timestamp > (NOW() - INTERVAL 1 HOUR) "
-                 "ORDER BY timestamp DESC LIMIT 30" )
-        #hire_start = datetime.date(1999, 1, 1)
-        #hire_end = datetime.date(1999, 12, 31)
+        if query == "":
+            query = ("Select timestamp, tempSet, tempActual FROM measurement "
+                     "WHERE deviceID=1 and timestamp > (NOW() - INTERVAL 1 HOUR) "
+                     "ORDER BY timestamp DESC LIMIT 30" )
+
 
         #cursor.execute(query, (hire_start, hire_end))
         cursor.execute(query)
         results = cursor.fetchall()
 
-        temp = np.zeros((len(results),2))
+        out = np.zeros((len(results),5))
         time = []
+        time_zero = 0
+        for index, (timestamp, data1, data2, data3, data4) in enumerate(results):
+            if index == 0:
+                time_zero = timestamp
 
-        for index, (timestamp, tempSet, tempActual) in enumerate(results):
             time.append(np.datetime64(timestamp, 's'))
-            temp[index, 0] = tempSet
-            temp[index, 1] = tempActual
+            dt = np.datetime64(timestamp, 's') - np.datetime64(time_zero, 's')
+            out[index, 0] = dt.item().total_seconds()
+            out[index, 1] = data1
+            out[index, 2] = data2
+            out[index, 3] = data3
+            out[index, 4] = data4
+
+        out = np.flipud(out)
+        out[:,0] -= out[0,0]
 
         cursor.close()
         conn.close()
-        return temp
+        return time, out
