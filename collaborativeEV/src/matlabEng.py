@@ -41,8 +41,8 @@ class matlabEng:
 
         #convert float to matlab double
         kp_mat = matlab.double(control_params[:, 0].tolist())
-        ki_mat = matlab.double(control_params[:, 0].tolist())
-        kd_mat = matlab.double(control_params[:, 0].tolist())
+        ki_mat = matlab.double(control_params[:, 1].tolist())
+        kd_mat = matlab.double(control_params[:, 2].tolist())
         u_mat = matlab.double(u.tolist())
         t_mat = matlab.double(t.tolist())
 
@@ -50,7 +50,7 @@ class matlabEng:
         simout = np.zeros((len(control_params[:,0]), len(t), 3))
 
         for i in range(len(control_params[:,0])):
-            output = self.eng.pid_step(kp_mat[i], ki_mat[i], kd_mat[i], u_mat, t_mat)
+            output = self.engine.pid_step(kp_mat[i], ki_mat[i], kd_mat[i], u_mat, t_mat)
             #output = eng.pid_step(Kp, Ki, Kd, u, t)
 
             #summarize outputs in single matrix
