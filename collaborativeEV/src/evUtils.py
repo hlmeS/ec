@@ -101,7 +101,7 @@ class ev_fitness:
         t = simout[:, 2]
         iae = 0
         for i in range(1, len(t)-1):
-            iae += abs(y[i] - u[i]) * abs(t[i]-t[i-1])
+            iae += abs(y[i] - u[i]) * (t[i]-t[i-1])
 
         return iae
 
@@ -135,7 +135,7 @@ class ev_fitness:
         J = w0 * Energy + (w1 * ISE + w2 * ITAE)
         simout columns: [time, tempset, tempactual, power, energy]
         """
-        self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.ise_calc(simout) / 100) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
+        self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
 
 
     def run_eval(self):
@@ -174,7 +174,7 @@ class ev_fitness:
                     nptime, simout = self.con.db_query(cnx, query)
 
                     if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
-                        self.J_ave[i] = 2500
+                        self.J_ave[i] = 700
                         break
 
                     if self.debug: print resp, "HEATING, Part 2.... , j: ", j
@@ -195,7 +195,7 @@ class ev_fitness:
 
                     # break if we don't get to the temperature within half the time at least
                     if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
-                        self.J_ave[i] = 2500
+                        self.J_ave[i] = 700
                         break
 
                     if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
@@ -224,18 +224,18 @@ class ev_fitness:
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
-                    if abs(self.J[i,k]) > 2000:
-                        self.J_ave[i] = 2500
+                    if abs(self.J[i,k]) > 700:
+                        self.J_ave[i] = 1000
                         break
 
                     # not getting close enough to target
                     elif sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 1 :
-                        self.J_ave[i] = 2500
+                        self.J_ave[i] = 1000
                         break
 
                     # too much overshoot (10%) (can have 3 outlier due to error reading)
                     elif sum( 0.9*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 2500
+                        self.J_ave[i] = 1000
                         break
 
                     k += 1
@@ -251,7 +251,7 @@ class ev_fitness:
                         break
                     """
                     if sum( 1.15*temp < y for y in simout[:,2]) > 3 :
-                        self.J_ave[i] = 2000
+                        self.J_ave[i] = 1000
                         break
 
 
@@ -277,16 +277,16 @@ class ev_operators:
 
         # variation operators
         #self.recomb_rate = 0.5
-        self.mut_rate = 0.3
+        self.mut_rate = 0.2
         self.mut_oper = "cauchy"
-        self.mut_gauss_step = 1
+        self.mut_gauss_step = 4
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.5, 20], [0.0, 0.5], [0.0, 80.0]])
+        self.gain_limits = np.array([[0.5, 40], [0.0, 0.5], [0.5, 80.0]])
         #self.alpha = 1.0self.recomb_rate
 
-        self.fit_weights = [0.6, 0.4] #, 0.1]    # energy, ise, itae
+        self.fit_weights = [0.4, 0.6] #, 0.1]    # energy, ise, itae
 
         self.parents = self.pop_rand_init()
         self.children = np.zeros((np.shape(self.parents)))
@@ -366,11 +366,11 @@ class ev_operators:
                 if float(np.random.random(1)) >= self.mut_rate:
                     if self.mut_oper == "gaussian" :
                         dist =np.random.normal(0, step/math.sqrt(2.0/math.pi))
-                        if j == 1: pop[i,j] +=  dist / 50
+                        if j == 1: pop[i,j] +=  dist / 100
                         else: pop[i,j] += dist
                     elif self.mut_oper == "cauchy" :
                         dist = float(np.random.standard_cauchy(1))
-                        if j == 1: pop[i,j] +=  dist / 50
+                        if j == 1: pop[i,j] +=  dist / 100
                         else: pop[i,j] += dist
 
                 if pop[i,j] > self.gain_limits[j, 1]:
