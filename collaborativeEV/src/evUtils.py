@@ -59,7 +59,7 @@ class ev_fitness:
         self.con = sqlCon.sqlCon()
 
         self.debug = debug
-	self.debug2 = 0
+        self.debug2 = 0
 
     def execRequest(self, tempset, controls):
         #params = urllib.urlencode({'tempset': controls[0], 'Kp': 1.3, 'Ki': 0.05, 'Kd': 0.4, 'valve_lower_limit': 10, 'valve_upper_limit': 150, 'valve_center': 40, 'windup': 450, 'sampletime':45, 'dcmultiplier':2})
@@ -135,7 +135,7 @@ class ev_fitness:
         J = w0 * Energy + (w1 * ISE + w2 * ITAE)
         simout columns: [time, tempset, tempactual, power, energy]
         """
-        self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * self.ise_calc(simout) + self.j_weights[2] * self.itae_calc(simout)
+        self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.ise_calc(simout) / 100) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
 
 
     def run_eval(self):
@@ -154,28 +154,69 @@ class ev_fitness:
             """ temp setpoint loop """
             k = 0
             for j, temp in enumerate(self.ctrl_temps):
+
                 if self.debug:
-                    print temp, " , " , self.ctrl_interval, 
+                    print "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+                    print "Iteration: " , i , " Setpoint: ", temp, " Interval: " , self.ctrl_interval, " Timestamp: " ,
                     print datetime.datetime.now(), " , ",  datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval)
-                
-		# update the controls
-                resp  = self.execRequest(temp, control_param)
-                if self.debug: print resp
-                pause.until(datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval))
-                if self.debug: print "PAU Waiting"
+
+		        # update the controls
+                if j == 0 or np.diff(self.ctrl_temps)[j-1] >= 0:
+                    resp = self.execRequest(temp+5, control_param)
+                    if self.debug: print resp, "HEATING, Part 1.... , j: ", j
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.5*self.ctrl_interval)))
+                    resp = self.execRequest(temp, control_param)
+
+                    query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
+                             "WHERE containerID=2 ORDER BY timestamp DESC LIMIT 5 ; " )
+
+                    cnx = self.con.db_connect()
+                    nptime, simout = self.con.db_query(cnx, query)
+
+                    if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
+                        self.J_ave[i] = 2500
+                        break
+
+                    if self.debug: print resp, "HEATING, Part 2.... , j: ", j
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.5*self.ctrl_interval-0.5)))
+                    if self.debug: print "PAU Waiting"
+
+                else:
+                    resp  = self.execRequest(temp, control_param)
+                    if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=0.5*self.ctrl_interval))
+                    resp = self.execRequest(temp, control_param)
+
+                    query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
+                             "WHERE containerID=2 ORDER BY timestamp DESC LIMIT 5 ; " )
+
+                    cnx = self.con.db_connect()
+                    nptime, simout = self.con.db_query(cnx, query)
+
+                    # break if we don't get to the temperature within half the time at least
+                    if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
+                        self.J_ave[i] = 2500
+                        break
+
+                    if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.5*self.ctrl_interval-0.5)))
+                    if self.debug: print "PAU Waiting"
+
 
                 #query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
                 #         "WHERE deviceID=2 and timestamp >= (NOW() - INTERVAL " + str(self.ctrl_interval*4) + " MINUTE) " )
                 query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
                          "WHERE containerID=2 ORDER BY timestamp DESC LIMIT " + str(self.ctrl_interval*4) + " ; " )
 
-		cnx = self.con.db_connect()
+                cnx = self.con.db_connect()
                 nptime, simout = self.con.db_query(cnx, query)
                 # if it's cooling ... cooling next iteration has higher value
                 if j > 0 and np.diff(self.ctrl_temps)[j-1] < 0:
                     #cnx = self.con.db_connect()
                     #nptime, simout = self.con.db_query(cnx, query)
                     self.J_eval(i, k, simout)
+                    if self.debug: print self.J[i, :]
+
                     if self.debug2:
                         print nptime, simout
                         print self.J
@@ -183,35 +224,36 @@ class ev_fitness:
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
-                    if abs(self.J[i,k]) > 20000:
-                        self.J_ave[i] = 20000
+                    if abs(self.J[i,k]) > 2000:
+                        self.J_ave[i] = 2500
                         break
 
                     # not getting close enough to target
-                    elif sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 2 :
-                        self.J_ave[i] = 20000
+                    elif sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 1 :
+                        self.J_ave[i] = 2500
                         break
 
                     # too much overshoot (10%) (can have 3 outlier due to error reading)
-                    elif sum( 0.9*temp > y for y in simout[:,2]) > 3 :
-                        self.J_ave[i] = 20000
+                    elif sum( 0.9*temp > y for y in simout[:,2]) > 5 :
+                        self.J_ave[i] = 2500
                         break
 
                     k += 1
-		    
-                    if self.debug: 
-			print self.J
+
+                    if self.debug: print self.J
 
                 else:
+                    """
                     start_e = abs(temp - np.mean(simout[0:5, 2]))
                     end_e = abs(temp - np.mean(simout[-5:, 2]))
                     if start_e < end_e :
                         self.J_ave[i] = 20000
                         break
-                    elif sum( 1.15*temp < y for y in simout[:,2]) > 3 :
-                        self.J_ave[i] = 20000
+                    """
+                    if sum( 1.15*temp < y for y in simout[:,2]) > 3 :
+                        self.J_ave[i] = 2000
                         break
-                    
+
 
 
             """ get average fitness across all cooling cycles """
@@ -241,10 +283,10 @@ class ev_operators:
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.1, 15], [0.0, 0.1], [0.0, 5.0]])
+        self.gain_limits = np.array([[0.5, 20], [0.0, 0.5], [0.0, 80.0]])
         #self.alpha = 1.0self.recomb_rate
 
-        self.fit_weights = [0.6, 0.3, 0.1]    # energy, ise, itae
+        self.fit_weights = [0.6, 0.4] #, 0.1]    # energy, ise, itae
 
         self.parents = self.pop_rand_init()
         self.children = np.zeros((np.shape(self.parents)))
@@ -265,9 +307,11 @@ class ev_operators:
         #np.random.seed(self.rand_seed)
         #idx = np.arange(size).reshape(size, 1)
         #pop = self.spread * np.random.standard_cauchy((self.pop_size, self.gene_size))
-        pop = np.random.random((self.pop_size, self.gene_size))
-        pop[:, 0] *= self.spread
-        pop[:, 1:3] /= self.spread
+        Ku = 7.5 * (1 + np.random.random(self.pop_size) - 0.5)
+        pop = np.ones((self.pop_size, self.gene_size))
+        pop[:, 0] = Ku
+        pop[:, 1] = 1.2*Ku/300
+        pop[:, 2] = 3*Ku*60/40
         for i in range(self.pop_size):
             for j in range(self.gene_size):
                 if pop[i,j] > self.gain_limits[j, 1]:
@@ -321,12 +365,12 @@ class ev_operators:
             for j in range(self.gene_size):
                 if float(np.random.random(1)) >= self.mut_rate:
                     if self.mut_oper == "gaussian" :
-			dist =np.random.normal(0, step/math.sqrt(2.0/math.pi))
-			if j == 1: pop[i,j] +=  dist / 50
-			else: pop[i,j] += dist
+                        dist =np.random.normal(0, step/math.sqrt(2.0/math.pi))
+                        if j == 1: pop[i,j] +=  dist / 50
+                        else: pop[i,j] += dist
                     elif self.mut_oper == "cauchy" :
                         dist = float(np.random.standard_cauchy(1))
-			if j == 1: pop[i,j] +=  dist / 50
+                        if j == 1: pop[i,j] +=  dist / 50
                         else: pop[i,j] += dist
 
                 if pop[i,j] > self.gain_limits[j, 1]:
