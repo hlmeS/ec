@@ -174,11 +174,11 @@ class ev_fitness:
                     if np.diff(self.ctrl_temps)[j-1] < 0:
                         cnx = self.con.db_connect()
                         nptime, simout = self.con.db_query(cnx, query)
-                        if self.debug: print nptime, simout
                         self.J_eval(i, k, simout)
+                        if self.debug:
+                            print nptime, simout
+                            print self.J
                         k += 1
-                        if self.debug: print self.J
-
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
@@ -192,7 +192,7 @@ class ev_fitness:
                         break
 
                     # too much overshoot (10%) (can have 3 outlier due to error reading)
-                    elif sum( 0.9*temp > y for y in simput[:,2]) > 3 :
+                    elif sum( 0.9*temp > y for y in simout[:,2]) > 3 :
                         self.J_ave[i] = 20000
                         break
 
