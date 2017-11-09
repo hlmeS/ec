@@ -170,14 +170,13 @@ class ev_fitness:
                          "WHERE containerID=2 ORDER BY timestamp DESC LIMIT " + str(self.ctrl_interval*4) + " ; " )
 
                 # if it's cooling ... cooling next iteration has higher value
-                if j > 0:
-                    if np.diff(self.ctrl_temps)[j-1] < 0:
-                        cnx = self.con.db_connect()
-                        nptime, simout = self.con.db_query(cnx, query)
-                        self.J_eval(i, k, simout)
-                        if self.debug:
-                            print nptime, simout
-                            print self.J
+                if j > 0 and np.diff(self.ctrl_temps)[j-1] < 0:
+                    cnx = self.con.db_connect()
+                    nptime, simout = self.con.db_query(cnx, query)
+                    self.J_eval(i, k, simout)
+                    if self.debug:
+                        print nptime, simout
+                        print self.J
 
                     # put code here to break if gene shows nonconstructive behavior.
 
@@ -197,6 +196,18 @@ class ev_fitness:
                         break
 
                     k += 1
+
+                else:
+                    start_e = abs(temp - np.mean(simout[0:5, 2]))
+                    end_e = abs(temp - np.mean(simout[-5:, 2]))
+                    if start_e < end_e :
+                        self.J_ave[i] = 20000
+                        break
+                    elif sum( 1.15*temp < y for y in simout[:,2]) > 3 :
+                        self.J_ave[i] = 20000
+                        break
+                    
+
 
             """ get average fitness across all cooling cycles """
             self.J_ave[i] = np.mean(self.J[i, :])
