@@ -59,6 +59,7 @@ class ev_fitness:
         self.con = sqlCon.sqlCon()
 
         self.debug = debug
+	self.debug2 = 0
 
     def execRequest(self, tempset, controls):
         #params = urllib.urlencode({'tempset': controls[0], 'Kp': 1.3, 'Ki': 0.05, 'Kd': 0.4, 'valve_lower_limit': 10, 'valve_upper_limit': 150, 'valve_center': 40, 'windup': 450, 'sampletime':45, 'dcmultiplier':2})
@@ -154,11 +155,10 @@ class ev_fitness:
             k = 0
             for j, temp in enumerate(self.ctrl_temps):
                 if self.debug:
-                    print temp
-                    print self.ctrl_interval
-                    print datetime.datetime.now()
-                    print datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval)
-                # update the controls
+                    print temp, " , " , self.ctrl_interval, 
+                    print datetime.datetime.now(), " , ",  datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval)
+                
+		# update the controls
                 resp  = self.execRequest(temp, control_param)
                 if self.debug: print resp
                 pause.until(datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval))
@@ -169,19 +169,21 @@ class ev_fitness:
                 query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
                          "WHERE containerID=2 ORDER BY timestamp DESC LIMIT " + str(self.ctrl_interval*4) + " ; " )
 
+		cnx = self.con.db_connect()
+                nptime, simout = self.con.db_query(cnx, query)
                 # if it's cooling ... cooling next iteration has higher value
                 if j > 0 and np.diff(self.ctrl_temps)[j-1] < 0:
-                    cnx = self.con.db_connect()
-                    nptime, simout = self.con.db_query(cnx, query)
+                    #cnx = self.con.db_connect()
+                    #nptime, simout = self.con.db_query(cnx, query)
                     self.J_eval(i, k, simout)
-                    if self.debug:
+                    if self.debug2:
                         print nptime, simout
                         print self.J
 
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
-                    if self.J[i,k] > 20000:
+                    if abs(self.J[i,k]) > 20000:
                         self.J_ave[i] = 20000
                         break
 
@@ -196,6 +198,9 @@ class ev_fitness:
                         break
 
                     k += 1
+		    
+                    if self.debug: 
+			print self.J
 
                 else:
                     start_e = abs(temp - np.mean(simout[0:5, 2]))
@@ -230,13 +235,13 @@ class ev_operators:
 
         # variation operators
         #self.recomb_rate = 0.5
-        self.mut_rate = 0.6
+        self.mut_rate = 0.3
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 1
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.1, 15], [0.0, 5.0], [0.0, 5.0]])
+        self.gain_limits = np.array([[0.1, 15], [0.0, 0.1], [0.0, 5.0]])
         #self.alpha = 1.0self.recomb_rate
 
         self.fit_weights = [0.6, 0.3, 0.1]    # energy, ise, itae
@@ -316,9 +321,13 @@ class ev_operators:
             for j in range(self.gene_size):
                 if float(np.random.random(1)) >= self.mut_rate:
                     if self.mut_oper == "gaussian" :
-                        pop[i,j] += np.random.normal(0, step/math.sqrt(2.0/math.pi))
+			dist =np.random.normal(0, step/math.sqrt(2.0/math.pi))
+			if j == 1: pop[i,j] +=  dist / 50
+			else: pop[i,j] += dist
                     elif self.mut_oper == "cauchy" :
-                        pop[i,j] += float(np.random.standard_cauchy(1))
+                        dist = float(np.random.standard_cauchy(1))
+			if j == 1: pop[i,j] +=  dist / 50
+                        else: pop[i,j] += dist
 
                 if pop[i,j] > self.gain_limits[j, 1]:
                     pop[i,j] = self.gain_limits[j, 1]
