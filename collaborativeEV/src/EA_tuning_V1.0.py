@@ -114,10 +114,10 @@ def run_EV():
     #ctrl_temps = [tmax, setpoint, setpoint+10, tmin, tmax, setpoint]
     ctrl_temps = [tmax, setpoint, tmin]
     ctrl_params = [10, 150, 45, 350, 60, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
-    ctrl_interval = 5                               # mins
+    ctrl_interval = 15                               # mins
 
     # Evolutionary Parameters
-    runtime = 3                                     # iterations
+    runtime = 5                                     # iterations
     debug = 1                                       # for printing to screen, turn off on server.
 
     # init ev operators class, which contains: parents, children, , just one until parallelized
