@@ -174,7 +174,7 @@ class ev_fitness:
                     nptime, simout = self.con.db_query(cnx, query)
 
                     if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
-                        self.J_ave[i] = 700
+                        self.J_ave[i] = 10000
                         break
 
                     if self.debug: print resp, "HEATING, Part 2.... , j: ", j
@@ -195,7 +195,7 @@ class ev_fitness:
 
                     # break if we don't get to the temperature within half the time at least
                     if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
-                        self.J_ave[i] = 700
+                        self.J_ave[i] = 10000
                         break
 
                     if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
@@ -224,18 +224,18 @@ class ev_fitness:
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
-                    if abs(self.J[i,k]) > 700:
-                        self.J_ave[i] = 1000
+                    if abs(self.J[i,k]) > 7500:
+                        self.J_ave[i] = 10000
                         break
 
                     # not getting close enough to target
                     elif sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 1 :
-                        self.J_ave[i] = 1000
+                        self.J_ave[i] = 10000
                         break
 
                     # too much overshoot (10%) (can have 3 outlier due to error reading)
                     elif sum( 0.9*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 1000
+                        self.J_ave[i] = 10000
                         break
 
                     k += 1
@@ -251,7 +251,7 @@ class ev_fitness:
                         break
                     """
                     if sum( 1.15*temp < y for y in simout[:,2]) > 3 :
-                        self.J_ave[i] = 1000
+                        self.J_ave[i] = 8000
                         break
 
 
@@ -286,7 +286,7 @@ class ev_operators:
         self.gain_limits = np.array([[0.5, 40], [0.0, 0.5], [0.5, 80.0]])
         #self.alpha = 1.0self.recomb_rate
 
-        self.fit_weights = [0.4, 0.6] #, 0.1]    # energy, ise, itae
+        self.fit_weights = [0.7, 0.3] #, 0.1]    # energy, ise, itae
 
         self.parents = self.pop_rand_init()
         self.children = np.zeros((np.shape(self.parents)))
