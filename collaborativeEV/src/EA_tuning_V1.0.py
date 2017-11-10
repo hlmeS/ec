@@ -125,8 +125,8 @@ def run_EV():
     #evUtils.ev_fitness(evops.parents, ctrl_temps, ctrl_intergacl, ctrl_params, evops.fit_weights)
 
     # Fitness values per iterations
-    Jparents =  1000 * np.ones((evops.pop_size+1, 1))
-    Jchildren = 1000 * np.ones((evops.pop_size+1, 1))
+    Jparents =  10000 * np.ones((evops.pop_size+1, 1))
+    Jchildren = 10000 * np.ones((evops.pop_size+1, 1))
 
     # Fitness average and max over iterations
     Jave = np.zeros((runtime, 1))
