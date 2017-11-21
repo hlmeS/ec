@@ -16,6 +16,8 @@ How to take advantage of existing technology and known computational methods to 
 
 LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
++++
+
 | ![Top](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_ContainerTop.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_Inside.png) |
 |:---:|:---:|
 | Container Top View | Indoor Ducted Units |
@@ -34,7 +36,7 @@ LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 |Schematic view of dynamic system |
 
 
-+++
+---
 
 ## Controller Design
 
@@ -59,9 +61,31 @@ _Proposed Method:_ Genetic search algorithm
 * Numerous works on PID controller tuning using EV: genetic search, particle swarm optimization, differential evolution
 * Most works simply consider simulations
 
++++
+
+## Challenges
+
+How to interface with the system?
+
+How to overcome time constraints? (One passive heating & active cooling cycle takes about 20-30 minutes.
+
++++
+
+## Approach
+
+IoT system design to communicate with learning agents over the network.
+
+Network multiple learning agents.
+
+Store environmental and contorl parameters of each agent in a Graph Database.
+
 ---
 
-## Genetic Search Algorithm
+## Genetic Search Algorithm 
+
+#### Design
+
++++
 
 | ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_Process_V1.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_FitnessEval_V1.png) |
 |:---:|:---:|
