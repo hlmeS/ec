@@ -1,2 +1,9 @@
+theme : white
+theme-override : assets/css/PITCHME.css
+background : assets/bg.jpg
+background-size : cover
+logo : assets/shidler.png
+highlight : atom-one-dark
 mathjax : TeX-AMS_HTML-full
 charts : true
+slide-number: true

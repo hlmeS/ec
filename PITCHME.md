@@ -1,16 +1,24 @@
-## Evolutionary Approach to PID Tuning
-##### Applied to a Mass-Spring-Damper system
+## Network Coordinated Evolution
+#### Modeling and Control of Distributed System through On-Line Genetic PID-Control Optimization Search
 
 ---
 
-## Mass Spring Damper System
+## Motivation
 
-The goal is to model a dynamical system and evolve the PID gains to control the system.
+Can we modernize the grid without reinventing the wheel?
+
+How to take advantage of existing technology and known computational methods to increase efficiency and renewable integration?
 
 
 +++
 
-## Model
+## Use Case
+
+LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
+
+| [![Top](collaborativeEV/images/Kahuku_ContainerTop.png)](collaborativeEV/images/Kahuku_ContainerTop.png)  | [![Inside](collaborativeEV/images/Kahuku_Inside.png)](collaborativeEV/images/Kahuku_ContainerTop.png) |
+|:---:|:---:|
+| http://videoblocks.com | http://audioblocks.com |
 
 
 `f(t) = m x''(t) + c mx'(t) + kx(t)`

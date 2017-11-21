@@ -1,0 +1,350 @@
+Population 0:  [[  6.25518579e+00   2.50207432e-02   2.81483360e+01]
+ [  6.66413996e+00   2.66565598e-02   2.99886298e+01]
+ [  6.15377801e+00   2.46151121e-02   2.76920011e+01]]
+60  ,  7 2017-11-09 04:12:53.451504  ,  2017-11-09 04:19:53.451514
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a41cab8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 04:19:53.952988  ,  2017-11-09 04:26:53.953008
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a413758>
+Connecting to MySQL database...
+connection established.
+[-197802.53551474   20000.        ]
+60  ,  7 2017-11-09 04:26:54.482986  ,  2017-11-09 04:33:54.483113
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a463cb0>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 04:33:55.044853  ,  2017-11-09 04:40:55.044873
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a469cf8>
+Connecting to MySQL database...
+connection established.
+[-95978.10854757  20000.        ]
+60  ,  7 2017-11-09 04:40:55.523728  ,  2017-11-09 04:47:55.523748
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5cebd8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 04:47:55.952087  ,  2017-11-09 04:54:55.952157
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d1cb0>
+Connecting to MySQL database...
+connection established.
+[ 116371.57546453   20000.        ]
+Population 0:  [[  6.25518579e+00   2.50207432e-02   2.81483360e+01]
+ [  6.66413996e+00   2.66565598e-02   2.99886298e+01]
+ [  6.15377801e+00   2.46151121e-02   2.76920011e+01]]
+Fitness :  [[-88901.26775737]
+ [-37989.05427379]
+ [ 68185.78773226]]
+Mean:  [-19568.17809963]  Max:  [-19568.17809963]
+Should query graph DB
+Offspring Population  0  :  [[  6.25518579e+00   2.50207432e-02   2.60049080e+01]
+ [  5.64872038e+00   2.66565598e-02   3.02957547e+01]
+ [  2.00000000e+01   2.46151121e-02   1.44699595e+01]]
+60  ,  7 2017-11-09 04:54:56.382184  ,  2017-11-09 05:01:56.382211
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a41c758>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 05:01:56.791833  ,  2017-11-09 05:08:56.791854
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d9518>
+Connecting to MySQL database...
+connection established.
+[ 967730.73298847   20000.        ]
+60  ,  7 2017-11-09 05:08:57.257222  ,  2017-11-09 05:15:57.257242
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d92d8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 05:15:57.740231  ,  2017-11-09 05:22:57.740347
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d9200>
+Connecting to MySQL database...
+connection established.
+[ 151448.02277262   20000.        ]
+60  ,  7 2017-11-09 05:22:58.142777  ,  2017-11-09 05:29:58.142827
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d3440>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 05:29:58.664585  ,  2017-11-09 05:36:58.664702
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a41c290>
+Connecting to MySQL database...
+connection established.
+[ 159863.95939966   20000.        ]
+Offspring Population 0  :  [[  6.25518579e+00   2.50207432e-02   2.60049080e+01]
+ [  5.64872038e+00   2.66565598e-02   3.02957547e+01]
+ [  2.00000000e+01   2.46151121e-02   1.44699595e+01]]
+Fitness :  [[ 493865.36649423]
+ [  85724.01138631]
+ [  89931.97969983]]
+60  ,  7 2017-11-09 05:36:59.128412  ,  2017-11-09 05:43:59.128572
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d3ea8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 05:43:59.625404  ,  2017-11-09 05:50:59.625424
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a469950>
+Connecting to MySQL database...
+connection established.
+[ 124410.1590904   20000.       ]
+60  ,  7 2017-11-09 05:51:00.033734  ,  2017-11-09 05:58:00.033792
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5dedd0>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 05:58:00.457029  ,  2017-11-09 06:05:00.457050
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae06560>
+Connecting to MySQL database...
+connection established.
+[-42394.98968177  20000.        ]
+60  ,  7 2017-11-09 06:05:00.909663  ,  2017-11-09 06:12:00.909683
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae06ab8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 06:12:01.365654  ,  2017-11-09 06:19:01.365678
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae06830>
+Connecting to MySQL database...
+connection established.
+[-169789.42395439   20000.        ]
+Parent Population 1  :  [[  6.25518579e+00   2.50207432e-02   2.60049080e+01]
+ [  5.64872038e+00   2.66565598e-02   3.02957547e+01]
+ [  2.00000000e+01   2.46151121e-02   1.44699595e+01]]
+Fitness :  [[ 72205.0795452 ]
+ [-11197.49484089]
+ [-74894.7119772 ]]
+Mean:  [-4629.04242429]  Max:  [-4629.04242429]
+Offspring Population  1  :  [[  5.48983787e+00   2.50207432e-02   2.60049080e+01]
+ [  3.83601506e+00   2.66565598e-02   2.87232802e+01]
+ [  2.00000000e+01   2.01446627e-02   4.17362052e+01]]
+60  ,  7 2017-11-09 06:19:01.821650  ,  2017-11-09 06:26:01.821663
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae025a8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 06:26:02.203160  ,  2017-11-09 06:33:02.203245
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5de878>
+Connecting to MySQL database...
+connection established.
+[-188552.0981491   20000.       ]
+60  ,  7 2017-11-09 06:33:02.587423  ,  2017-11-09 06:40:02.587436
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5ceea8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 06:40:03.001489  ,  2017-11-09 06:47:03.001510
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d1290>
+Connecting to MySQL database...
+connection established.
+[-241536.64618611   20000.        ]
+60  ,  7 2017-11-09 06:47:03.543470  ,  2017-11-09 06:54:03.543489
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d3e60>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 06:54:04.010688  ,  2017-11-09 07:01:04.010774
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d0c68>
+Connecting to MySQL database...
+connection established.
+[ 50283.66908811  20000.        ]
+Offspring Population 1  :  [[  5.48983787e+00   2.50207432e-02   2.60049080e+01]
+ [  3.83601506e+00   2.66565598e-02   2.87232802e+01]
+ [  2.00000000e+01   2.01446627e-02   4.17362052e+01]]
+Fitness :  [[ -84276.04907455]
+ [-110768.32309306]
+ [  35141.83454406]]
+60  ,  7 2017-11-09 07:01:04.417398  ,  2017-11-09 07:08:04.417510
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae025f0>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 07:08:04.926340  ,  2017-11-09 07:15:04.926361
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae0b290>
+Connecting to MySQL database...
+connection established.
+[-200406.25210544   20000.        ]
+60  ,  7 2017-11-09 07:15:05.378395  ,  2017-11-09 07:22:05.378418
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae0bc68>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 07:22:05.796808  ,  2017-11-09 07:29:05.796854
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d3bd8>
+Connecting to MySQL database...
+connection established.
+[ 1358314.99974191    20000.        ]
+60  ,  7 2017-11-09 07:29:06.204319  ,  2017-11-09 07:36:06.204404
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5d33f8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 07:36:06.671462  ,  2017-11-09 07:43:06.671483
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a2d3488>
+Connecting to MySQL database...
+connection established.
+[-232890.80337415   20000.        ]
+Parent Population 2  :  [[  3.83601506e+00   2.66565598e-02   2.87232802e+01]
+ [  5.48983787e+00   2.50207432e-02   2.60049080e+01]
+ [  2.00000000e+01   2.01446627e-02   4.17362052e+01]]
+Fitness :  [[ -90203.12605272]
+ [ 689157.49987095]
+ [-106445.40168708]]
+Mean:  [ 164169.65737705]  Max:  [ 164169.65737705]
+Offspring Population  2  :  [[  4.18217084e+00   3.52471808e-02   2.91135923e+01]
+ [  5.48983787e+00   6.75340030e-02   2.89199823e+01]
+ [  2.00000000e+01   5.73762904e-02   4.17362052e+01]]
+60  ,  7 2017-11-09 07:43:08.045210  ,  2017-11-09 07:50:08.045225
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a413fc8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 07:50:08.540544  ,  2017-11-09 07:57:08.540565
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a4136c8>
+Connecting to MySQL database...
+connection established.
+[-127965.98091104   20000.        ]
+60  ,  7 2017-11-09 07:57:08.955307  ,  2017-11-09 08:04:08.955375
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a469f38>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 08:04:09.409851  ,  2017-11-09 08:11:09.409959
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae028c0>
+Connecting to MySQL database...
+connection established.
+[ 176985.85610219   20000.        ]
+60  ,  7 2017-11-09 08:11:09.864924  ,  2017-11-09 08:18:09.864944
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae06488>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 08:18:10.313885  ,  2017-11-09 08:25:10.313899
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae07b90>
+Connecting to MySQL database...
+connection established.
+[ 118646.64513423   20000.        ]
+Offspring Population 2  :  [[  4.18217084e+00   3.52471808e-02   2.91135923e+01]
+ [  5.48983787e+00   6.75340030e-02   2.89199823e+01]
+ [  2.00000000e+01   5.73762904e-02   4.17362052e+01]]
+Fitness :  [[-53982.99045552]
+ [ 98492.9280511 ]
+ [ 69323.32256711]]
+60  ,  7 2017-11-09 08:25:10.774854  ,  2017-11-09 08:32:10.774879
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae07d88>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 08:32:11.181569  ,  2017-11-09 08:39:11.181595
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae07bd8>
+Connecting to MySQL database...
+connection established.
+[ 174882.13556272   20000.        ]
+60  ,  7 2017-11-09 08:39:11.688220  ,  2017-11-09 08:46:11.688236
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a413758>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 08:46:12.266616  ,  2017-11-09 08:53:12.266637
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5ce320>
+Connecting to MySQL database...
+connection established.
+[ 189379.13359838   20000.        ]
+60  ,  7 2017-11-09 08:53:12.725654  ,  2017-11-09 09:00:12.725767
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a5de560>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 09:00:13.159996  ,  2017-11-09 09:07:13.160024
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae02098>
+Connecting to MySQL database...
+connection established.
+[ 306251.23642391   20000.        ]
+Parent Population 3  :  [[  2.00000000e+01   5.73762904e-02   4.17362052e+01]
+ [  4.18217084e+00   3.52471808e-02   2.91135923e+01]
+ [  4.18217084e+00   3.52471808e-02   2.91135923e+01]]
+Fitness :  [[  97441.06778136]
+ [ 104689.56679919]
+ [ 163125.61821195]]
+Mean:  [ 121752.08426417]  Max:  [ 121752.08426417]
+Offspring Population  3  :  [[  2.00000000e+01   4.62019176e-02   4.14743181e+01]
+ [  4.18217084e+00   3.52471808e-02   2.88914754e+01]
+ [  5.00000000e-01   0.00000000e+00   2.92123772e+01]]
+60  ,  7 2017-11-09 09:07:13.628911  ,  2017-11-09 09:14:13.628927
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10ae07cf8>
+Connecting to MySQL database...
+connection established.
+54  ,  7 2017-11-09 09:14:14.953475  ,  2017-11-09 09:21:14.953495
+<Response [200]>
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x10a41c170>
+Connecting to MySQL database...
+connection established.
+[ 30249.12162419  20000.        ]
+60  ,  7 2017-11-09 09:21:15.457294  ,  2017-11-09 09:28:15.457318
+<Response [200]>

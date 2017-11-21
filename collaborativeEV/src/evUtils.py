@@ -48,8 +48,8 @@ class ev_fitness:
         # placeholder for fitness values
         self.k = sum(x < 0 for x in np.diff(ctrl_temps))
         self.m = len(population)
-        self.J = 20000*np.ones((self.m,self.k))
-        self.J_ave = 20000*np.ones((self.m, 1))
+        self.J = 10000*np.ones((self.m,self.k))
+        self.J_ave = 10000*np.ones((self.m, 1))
         #J = np.concatenate((pop[:,0].reshape(psize,1), np.zeros((psize,1))), axis = 1)
         self.j_weights = fit_weights
 
@@ -133,7 +133,8 @@ class ev_fitness:
     def J_eval(self, i, k, simout):
         """
         J = w0 * Energy + (w1 * ISE + w2 * ITAE)
-        simout columns: [time, tempset, tempactual, power, energy]
+        simout columns: [time, tempset, tempactu
+        al, power, energy]
         """
         self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
 
@@ -147,6 +148,8 @@ class ev_fitness:
         """
 
         """ gene population loop """
+        self.ctrl_temps[1] = np.random.normal(self.ctrl_temps[1], 1/math.sqrt(2.0/math.pi))
+
         for i in range(0, self.m):
             # put together control parameters , same across the different temperatures
             control_param = [self.population[i, 0], self.population[i, 1], self.population[i,2]] + self.ctrl_params
@@ -162,44 +165,30 @@ class ev_fitness:
 
 		        # update the controls
                 if j == 0 or np.diff(self.ctrl_temps)[j-1] >= 0:
-                    resp = self.execRequest(temp+5, control_param)
-                    if self.debug: print resp, "HEATING, Part 1.... , j: ", j
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.5*self.ctrl_interval)))
                     resp = self.execRequest(temp, control_param)
-
-                    query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
-                             "WHERE containerID=2 ORDER BY timestamp DESC LIMIT 5 ; " )
-
-                    cnx = self.con.db_connect()
-                    nptime, simout = self.con.db_query(cnx, query)
-
-                    if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
-                        self.J_ave[i] = 10000
-                        break
-
-                    if self.debug: print resp, "HEATING, Part 2.... , j: ", j
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.5*self.ctrl_interval-0.5)))
-                    if self.debug: print "PAU Waiting"
+                    if self.debug: print resp, "HEATING,  ", j
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(self.ctrl_interval-10)))
 
                 else:
                     resp  = self.execRequest(temp, control_param)
                     if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=0.5*self.ctrl_interval))
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=0.6*self.ctrl_interval))
                     resp = self.execRequest(temp, control_param)
 
                     query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
-                             "WHERE containerID=2 ORDER BY timestamp DESC LIMIT 5 ; " )
+                             "WHERE containerID=2 ORDER BY timestamp DESC LIMIT 30 ; " )
 
                     cnx = self.con.db_connect()
                     nptime, simout = self.con.db_query(cnx, query)
 
                     # break if we don't get to the temperature within half the time at least
-                    if not 0.9*temp < np.mean(simout[:, 2]) < 1.1*temp :
+                    #if not 0.95*temp < np.mean(simout[:, 2]) < 1.08*temp :
+                    if sum( 0.98*temp > y for y in simout[:,2]) > 5 :
                         self.J_ave[i] = 10000
                         break
 
-                    if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.5*self.ctrl_interval-0.5)))
+                    if self.debug: print resp, "COOLING, Part 2, with ... ", self.population[i,:]
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.4*self.ctrl_interval-0.5)))
                     if self.debug: print "PAU Waiting"
 
 
@@ -224,19 +213,19 @@ class ev_fitness:
                     # put code here to break if gene shows nonconstructive behavior.
 
                     # too much error
-                    if abs(self.J[i,k]) > 7500:
-                        self.J_ave[i] = 10000
-                        break
+                    #if abs(self.J[i,k]) > 7500:
+                    #    self.J_ave[i] = 10000
+                    #    break
 
                     # not getting close enough to target
-                    elif sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 1 :
+                    if sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 8 :
                         self.J_ave[i] = 10000
                         break
 
                     # too much overshoot (10%) (can have 3 outlier due to error reading)
-                    elif sum( 0.9*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 10000
-                        break
+                    elif sum( 0.98*temp > y for y in simout[:,2]) > 5 :
+                        self.J[i,k] *= 1.3
+                        #break
 
                     k += 1
 
@@ -251,7 +240,7 @@ class ev_fitness:
                         break
                     """
                     if sum( 1.15*temp < y for y in simout[:,2]) > 3 :
-                        self.J_ave[i] = 8000
+                        self.J_ave[i] = 10000
                         break
 
 
@@ -269,7 +258,7 @@ class ev_operators:
     def __init__(self):
 
         #initial population
-        self.pop_size = 3              # 5 parents
+        self.pop_size = 6              # 5 parents
         self.gene_size = 3              # Kp, Ki, Kd
         self.rand_seed = 1023         # random number seed
         self.spread = 2                # spreading factor for intial guess
@@ -277,16 +266,16 @@ class ev_operators:
 
         # variation operators
         #self.recomb_rate = 0.5
-        self.mut_rate = 0.2
+        self.mut_rate = 0.4
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 4
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.5, 40], [0.0, 0.5], [0.5, 80.0]])
+        self.gain_limits = np.array([[0.5, 40], [0.0, 5], [0.5, 400.0]])
         #self.alpha = 1.0self.recomb_rate
 
-        self.fit_weights = [0.7, 0.3] #, 0.1]    # energy, ise, itae
+        self.fit_weights = [0.3, 0.7] #, 0.1]    # energy, ise, itae
 
         self.parents = self.pop_rand_init()
         self.children = np.zeros((np.shape(self.parents)))
@@ -307,11 +296,11 @@ class ev_operators:
         #np.random.seed(self.rand_seed)
         #idx = np.arange(size).reshape(size, 1)
         #pop = self.spread * np.random.standard_cauchy((self.pop_size, self.gene_size))
-        Ku = 7.5 * (1 + np.random.random(self.pop_size) - 0.5)
+        Ku = 15 * (1 + np.random.random(self.pop_size) - 0.5)
         pop = np.ones((self.pop_size, self.gene_size))
-        pop[:, 0] = Ku
-        pop[:, 1] = 1.2*Ku/300
-        pop[:, 2] = 3*Ku*60/40
+        pop[:, 0] = 0.2* Ku
+        pop[:, 1] = 0.4*Ku/300
+        pop[:, 2] = 0.2*Ku*300/3
         for i in range(self.pop_size):
             for j in range(self.gene_size):
                 if pop[i,j] > self.gain_limits[j, 1]:
@@ -366,11 +355,11 @@ class ev_operators:
                 if float(np.random.random(1)) >= self.mut_rate:
                     if self.mut_oper == "gaussian" :
                         dist =np.random.normal(0, step/math.sqrt(2.0/math.pi))
-                        if j == 1: pop[i,j] +=  dist / 100
+                        if j == 1: pop[i,j] +=  dist / 10
                         else: pop[i,j] += dist
                     elif self.mut_oper == "cauchy" :
-                        dist = float(np.random.standard_cauchy(1))
-                        if j == 1: pop[i,j] +=  dist / 100
+                        dist = 5*float(np.random.standard_cauchy(1))
+                        if j == 1: pop[i,j] +=  dist / 10
                         else: pop[i,j] += dist
 
                 if pop[i,j] > self.gain_limits[j, 1]:
@@ -403,9 +392,10 @@ class ev_operators:
         #print
 
         #truncation
-
+        Jout = np.ones((np.shape(Jparent)))
         for i in range(self.pop_size):
             selection[i][:] = genes_J[i][1:1+self.gene_size]
+            Jout[i, 0] = genes_J[i, 0]
 
         #proportional
         '''
@@ -420,9 +410,23 @@ class ev_operators:
                     break
 
         '''
-        return selection
+        return selection, Jout
 
-    def selection_sus(parent, Jparent, children, Jchildren, iter):
+    def selection_sus(self, parent, Jparent, children, Jchildren, iter):
         """
         Stochastic Universal samplingTime
         """
+
+    def queryGraph(self, num):
+
+        gdb_result = np.array([ [10.57, 0.0423, 39.65],
+                            [7.5, 0.03, 85],
+                            [9.41, 0.01, 15.5],
+                            [5.13, 0.021, 105],
+                            [14, 0.045, 245],
+                            [3, 0.02, 300],
+                            [4, 0, 50.1]
+                         ])
+
+        for i in range(1, num+1):
+            self.parents[-i,:] = gdb_result[np.random.randint(len(gdb_result)), :]

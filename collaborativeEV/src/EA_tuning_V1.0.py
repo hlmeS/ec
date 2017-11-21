@@ -108,11 +108,12 @@ def run_EV():
 
 
     # Control Parameters
-    tmax = 60                                       # Fahrenheit
-    tmin = 48                                       # Fahrenheit
-    setpoint = 54                                   # Fahrenheit
+    tmax = 70                                       # Fahrenheit
+    tmin = 48                                      # Fahrenheit
+    setpoint = 53                                   # Fahrenheit
     #ctrl_temps = [tmax, setpoint, setpoint+10, tmin, tmax, setpoint]
-    ctrl_temps = [tmax, setpoint, tmin]
+    #ctrl_temps = [tmax, setpoint, tmin]
+    ctrl_temps = [tmax, setpoint]
     ctrl_params = [10, 150, 45, 350, 60, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
     ctrl_interval = 20                              # mins
 
@@ -130,7 +131,7 @@ def run_EV():
 
     # Fitness average and max over iterations
     Jave = np.zeros((runtime, 1))
-    Jmax = np.zeros((runtime, 1))
+    Jmin = np.zeros((runtime, 1))
 
     # calc first fitness
     evfit = evUtils.ev_fitness(evops.parents, ctrl_temps, ctrl_interval, ctrl_params, evops.fit_weights, debug)
@@ -138,20 +139,21 @@ def run_EV():
         print "Population 0: ", evops.parents
     Jparent = evfit.run_eval()
     Jave[0] = np.mean(Jparent)
-    Jmax[0] = np.mean(Jparent)
+    Jmin[0] = np.min(Jparent)
 
     if debug:
         print "Population 0: ", evops.parents
         print "Fitness : ", Jparent
-        print "Mean: ", Jave[0], " Max: ", Jmax[0]
+        print "Mean: ", Jave[0], " Min", Jmin[0]
 
     for i in range(runtime):
 
         # when i == 0, this is
 
         # Add immigrants to the parents
-        if not i % 10:
+        if not i % 2:
             if debug: print "Should query graph DB"
+            evops.queryGraph(1)
 
         # mutation
         evops.children = evops.mutate(evops.parents)
@@ -162,22 +164,23 @@ def run_EV():
             print "Offspring Population", i, " : ", evops.children
             print "Fitness : ", Jchildren
 
+
         # increase generation count,
         i += 1
 
         # selection of new generation (parents)
-        evops.parents = evops.selection_trunc(Jparent, Jchildren)
+        evops.parents, Jparent = evops.selection_trunc(Jparent, Jchildren)
 
         # calculate fitness
-        evfit = evUtils.ev_fitness(evops.parents, ctrl_temps, ctrl_interval, ctrl_params, evops.fit_weights, debug)
-        Jparent = evfit.run_eval()
+        #evfit = evUtils.ev_fitness(evops.parents, ctrl_temps, ctrl_interval, ctrl_params, evops.fit_weights, debug)
+        #Jparent = evfit.run_eval()
         Jave[i] = np.mean(Jparent)
-        Jmax[i] = np.mean(Jparent)
+        Jmin[i] = np.min(Jparent)
 
         if debug:
             print "Parent Population", i, " : ", evops.parents
             print "Fitness : ", Jparent
-            print "Mean: ", Jave[i], " Max: ", Jmax[i]
+            print "Mean: ", Jave[i], " Min: ", Jmin[i]
 
 
 
@@ -187,8 +190,8 @@ def run_EV():
     if debug:
         print 'Final pop: ', evops.parents
         print 'Final J: ', Jparent
-        print 'Jave: ', Jave[-5:]
-        print 'Jmax: ', Jmax[-5:]
+        print 'Jave: ', Jave
+        print 'Jmin: ', Jmin
 
 if __name__ == "__main__":
 
