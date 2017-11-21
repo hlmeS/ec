@@ -28,7 +28,7 @@ LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
 +++
 
-`f(t) = m x''(t) + c mx'(t) + kx(t)`
+$$ f(t) = m x''(t) + c mx'(t) + kx(t) $$
 
 `P(s) = F(s)/X(s) = 1 / (ms^2 + cs + k )`
 
