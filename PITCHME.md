@@ -81,7 +81,7 @@ Store environmental and contorl parameters of each agent in a Graph Database.
 
 ---
 
-## Genetic Search Algorithm 
+## Genetic Search Algorithm
 
 #### Design
 
@@ -89,7 +89,7 @@ Store environmental and contorl parameters of each agent in a Graph Database.
 
 | ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_Process_V1.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_FitnessEval_V1.png) |
 |:---:|:---:|
-| Outdoor Unit | Control Unit |
+| Main Loop | Fitness Evaluation |
 
 +++
 
