@@ -10,7 +10,7 @@ Can we modernize the grid without reinventing the wheel?
 How to take advantage of existing technology and known computational methods to increase efficiency and renewable integration?
 
 
-+++
+---
 
 ## Use Case
 
@@ -36,36 +36,33 @@ LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
 +++
 
-## Controller
+## Controller Design
 
+_Objective:_ Find control gains Kp, Ki, and Kd that best control the system.
 
-`u(t) = Kp * e(t) + Ki \int e(t)dt + Kp de(t)/dt`
+_Desired properties:_ Stability, low error, low energy usage.
 
-`C(s) = Kp + 1/s  Ki + s Kd`
+_Proposed Method:_ Genetic search algorithm
 
-![Figure 2](pidEV/figures/feedback_block.png)
 
 +++
 
-## Simulation Engine
+## Background
 
-MATLAB can be used to model the system and its response.
-
-```c
-function resp = pid_step(Kp, Ki, Kd, u, t)
-
-s = tf('s');
-G = 1/(s^2 + 10*s + 20);
-
-C = pid(Kp,Ki,Kd);
-T = feedback(C*G,1);
-
-[y, t] = lsim(T, u, t);
-resp = [y, t];
-
-```
+* PID controller is the most common controller in the industry
+* Can be tuned by hand or computer software (if dynamics are known); difficult when system dynamics are unknown, there are time delays, change in environments, etc.
+* Numerous works on PID controller tuning using EV: genetic search, particle swarm optimization, differential evolution
+* Most works simply consider simulations
 
 ---
+
+## Genetic Search Algorithm
+
+| ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_Flowchart_EVProcess_V1.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/CollaborativeEV_Flowchart_FitnessEval_V1.png) |
+|:---:|:---:|
+| Outdoor Unit | Control Unit |
+
++++
 
 ## Design & Implementation
 
