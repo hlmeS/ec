@@ -20,6 +20,7 @@ LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 |:---:|:---:|
 | http://videoblocks.com | http://audioblocks.com |
 
++++
 
 `f(t) = m x''(t) + c mx'(t) + kx(t)`
 
