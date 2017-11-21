@@ -16,9 +16,9 @@ How to take advantage of existing technology and known computational methods to 
 
 LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
-| ![Top](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_Inside.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_Inside.png) |
+| ![Top](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_ContainerTop.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_Inside.png) |
 |:---:|:---:|
-| http://videoblocks.com | http://audioblocks.com |
+| Container Top View | Indoor Ducted Units |
 
 +++
 
