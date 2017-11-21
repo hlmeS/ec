@@ -93,6 +93,15 @@ Store environmental and contorl parameters of each agent in a Graph Database.
 
 +++
 
+## Fitness Function
+
+| ![Schematic View](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/fitnessJ.png) |
+|:---:|
+| ![Schematic View](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/fitnessJ.png) |
+|:---:|
+| |
+
+
 ## Design & Implementation
 
 * search space and representation
