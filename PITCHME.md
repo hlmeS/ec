@@ -87,6 +87,8 @@ Store environmental and contorl parameters of each agent in a Graph Database.
 
 +++
 
+## Process
+
 | ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_Process_V1.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_FitnessEval_V1.png) |
 |:---:|:---:|
 | Main Loop | Fitness Evaluation |
@@ -98,26 +100,42 @@ Store environmental and contorl parameters of each agent in a Graph Database.
 | ![Schematic View](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/fitnessJ.png) |
 |:---:|
 | ![Schematic View](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/iae.png) |
+| Fitness Function J, Integrated Absolute Error IAE, and comsunme Energy E |
+
++++
+
+## Graph Database
+
+| ![Schematic View](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/ev_graphdb_2.png) |
 |:---:|
-| |
+| Graph representation in neo4j |
 
+---
 
-## Design & Implementation
+## Initial Implementation
 
-* search space and representation
-* the objective function
-* the variation operator
-* the recombination method
-* the selection method
++++
+
+## Parameters
+
+| ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/ga_param.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/ga_seq.png) |
+|:---:|:---:|
+| GA parameters | Setpoint sequence |
+
+## Initial Results
+
+| ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/GA_run1_gen1_annot_2.png) |
+|:---:|
+| Sample run analysis, promising observations did not lead to satisfactory convergence |
 
 
 ---
 
-## Search Space
+## Proposed Modifications
 
-- `Ki , Kp, and Kd`
-
-- Real numbers with upper and lower limits
+- Nodes to the graph database and update them through simulations
+- Additional learning agents
+- Revisit fitness function, mutation, and selection
 
 ---
 
