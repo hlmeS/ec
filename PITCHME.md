@@ -28,13 +28,15 @@ LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
 +++
 
+
+
 \[ f(t) = m x''(t) + c mx'(t) + kx(t) \]
 
 `P(s) = F(s)/X(s) = 1 / (ms^2 + cs + k )`
 
 `m = 1kg, c = 10 Ns/m, k = 20 N/m`
 
-![Figure 1](pidEV/figures/spring_damper_fbd.png)
+| ![Figure 1](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/EVAPI_Lezeti_control_diagram_DWG_MT-1.png) |
 
 
 +++
