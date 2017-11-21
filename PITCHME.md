@@ -51,6 +51,11 @@ _Proposed Method:_ Genetic search algorithm
 
 * PID controller is the most common controller in the industry
 * Can be tuned by hand or computer software (if dynamics are known); difficult when system dynamics are unknown, there are time delays, change in environments, etc.
+
++++
+
+## Background
+
 * Numerous works on PID controller tuning using EV: genetic search, particle swarm optimization, differential evolution
 * Most works simply consider simulations
 
@@ -58,7 +63,7 @@ _Proposed Method:_ Genetic search algorithm
 
 ## Genetic Search Algorithm
 
-| ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_Flowchart_EVProcess_V1.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/CollaborativeEV_Flowchart_FitnessEval_V1.png) |
+| ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_Process_V1.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/CollaborativeEV_FitnessEval_V1.png) |
 |:---:|:---:|
 | Outdoor Unit | Control Unit |
 
