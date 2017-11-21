@@ -7,7 +7,7 @@
 
 Can we modernize the grid without reinventing the wheel?
 
-How to take advantage of existing technology and known computational methods to increase efficiency and renewable integration?
+How to take advantage of existing technologies and known computational methods to increase efficiency and renewable integration?
 
 
 ---
@@ -44,7 +44,7 @@ _Objective:_ Find control gains Kp, Ki, and Kd that best control the system.
 
 _Desired properties:_ Stability, low error, low energy usage.
 
-_Proposed Method:_ Genetic search algorithm
+_Proposed Method:_ Genetic search algorithm.
 
 
 +++
@@ -52,13 +52,13 @@ _Proposed Method:_ Genetic search algorithm
 ## Background
 
 * PID controller is the most common controller in the industry
-* Can be tuned by hand or computer software (if dynamics are known); difficult when system dynamics are unknown, there are time delays, change in environments, etc.
+* Can be tuned by hand or computer software (if dynamics are known); difficult when system dynamics are unknown, when there are time delays, and when there are changes in the environment, etc.
 
 +++
 
 ## Background
 
-* Numerous works on PID controller tuning using EV: genetic search, particle swarm optimization, differential evolution
+* Numerous works on PID controller tuning using EV: genetic search, particle swarm optimization, differential evolution, ...
 * Most works simply consider simulations
 
 +++
@@ -67,7 +67,7 @@ _Proposed Method:_ Genetic search algorithm
 
 How to interface with the system?
 
-How to overcome time constraints? <br> (One passive heating & active cooling cycle takes about 20-30 minutes.
+How to overcome time constraints? <br> (One passive heating & active cooling cycle takes about 20-30 minutes.)
 
 +++
 
@@ -77,7 +77,7 @@ IoT system design to communicate with learning agents over the network.
 
 Network multiple learning agents.
 
-Store environmental and contorl parameters of each agent in a Graph Database.
+Store environmental and control parameters of each agent in a Graph Database.
 
 ---
 
