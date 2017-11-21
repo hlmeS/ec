@@ -22,6 +22,12 @@ LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
 +++
 
+| ![LEZETI](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_LEZETi.png)  | ![Inside](https://raw.githubusercontent.com/hlmes/ec/master/collaborativeEV/images/Kahuku_MIAO.png) |
+|:---:|:---:|
+| Outdoor Unit | Control Unit |
+
++++
+
 `f(t) = m x''(t) + c mx'(t) + kx(t)`
 
 `P(s) = F(s)/X(s) = 1 / (ms^2 + cs + k )`
