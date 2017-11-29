@@ -1,5 +1,5 @@
 ## Network Coordinated Evolution
-#### Modeling and Control of Distributed System through On-Line Genetic PID-Control Optimization Search
+#### Modeling and Control of Distributed System through Online Genetic Search Optimization
 
 ---
 
@@ -7,7 +7,7 @@
 
 Can we modernize the grid without reinventing the wheel?
 
-How to take advantage of existing technologies and known computational methods to increase efficiency and renewable integration?
+How can we take advantage of existing technologies and known computational methods to increase efficiency and renewable integration?
 
 
 ---
