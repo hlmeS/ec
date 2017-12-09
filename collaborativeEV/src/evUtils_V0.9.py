@@ -5,7 +5,7 @@
 Title: evUtils.py
 Author: Holm Smidt
 Version: 1.0
-Date: 12-09-2017
+Date: 11-04-2017
 
 Overview:
 Class wrapper for functions that allow help
@@ -136,9 +136,7 @@ class ev_fitness:
         simout columns: [time, tempset, tempactu
         al, power, energy]
         """
-        #self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
-        self.J[i,k] = 0.7 * abs(self.iae_calc(simout) ) + 0.01 * self.itae_calc(simout) + 0.29 * self.ise_calc(simout)
-
+        self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
 
     def run_eval(self):
         """
@@ -161,19 +159,19 @@ class ev_fitness:
 
                 if self.debug:
                     print "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-                    print "Iteration: " , i , " Setpoint: ", temp, " Interval: " , self.ctrl_interval[0], " Timestamp: " ,
-                    print datetime.datetime.now(), " , ",  datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval[0])
+                    print "Iteration: " , i , " Setpoint: ", temp, " Interval: " , self.ctrl_interval, " Timestamp: " ,
+                    print datetime.datetime.now(), " , ",  datetime.datetime.now() + datetime.timedelta(minutes=self.ctrl_interval)
 
 		        # update the controls
                 if j == 0 or np.diff(self.ctrl_temps)[j-1] >= 0:
                     resp = self.execRequest(temp, control_param)
                     if self.debug: print resp, "HEATING,  ", j
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(self.ctrl_interval[1])))
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(self.ctrl_interval-10)))
 
                 else:
                     resp  = self.execRequest(temp, control_param)
                     if self.debug: print resp, "COOLING, Part 1, with ... ", self.population[i,:]
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=0.6*self.ctrl_interval[0]))
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=0.6*self.ctrl_interval))
                     resp = self.execRequest(temp, control_param)
 
                     query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
@@ -183,20 +181,20 @@ class ev_fitness:
                     nptime, simout = self.con.db_query(cnx, query)
 
                     # break if we don't get to the temperature within half the time at least
-                    #if not 0.95*temp < np.mea n(simout[:, 2]) < 1.08*temp :
-                    if sum( 0.97*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 30,000
+                    #if not 0.95*temp < np.mean(simout[:, 2]) < 1.08*temp :
+                    if sum( 0.98*temp > y for y in simout[:,2]) > 5 :
+                        self.J_ave[i] = 10000
                         break
 
                     if self.debug: print resp, "COOLING, Part 2, with ... ", self.population[i,:]
-                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.4*self.ctrl_interval[0]-0.5)))
+                    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(0.4*self.ctrl_interval-0.5)))
                     if self.debug: print "PAU Waiting"
 
 
                 #query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
                 #         "WHERE deviceID=2 and timestamp >= (NOW() - INTERVAL " + str(self.ctrl_interval*4) + " MINUTE) " )
                 query = ("SELECT timestamp, tempSet, tempActual, (realP+dcP), (realE+dcE) FROM measurementHR "
-                         "WHERE containerID=2 ORDER BY timestamp DESC LIMIT " + str(self.ctrl_interval[0]*4) + " ; " )
+                         "WHERE containerID=2 ORDER BY timestamp DESC LIMIT " + str(self.ctrl_interval*4) + " ; " )
 
                 cnx = self.con.db_connect()
                 nptime, simout = self.con.db_query(cnx, query)
@@ -218,8 +216,13 @@ class ev_fitness:
                     #    self.J_ave[i] = 10000
                     #    break
 
+                    # not getting close enough to target
+                    if sum( 0.95*temp < y < 1.05*temp for y in simout[:,2]) < 8 :
+                        self.J_ave[i] = 10000
+                        break
+
                     # too much overshoot (10%) (can have 3 outlier due to error reading)
-                    elif sum( 0.98*temp > y for y in simout[:,2]) > 10 :
+                    elif sum( 0.98*temp > y for y in simout[:,2]) > 5 :
                         self.J[i,k] *= 1.3
                         #break
 
@@ -228,7 +231,16 @@ class ev_fitness:
                     if self.debug: print self.J
 
                 else:
-
+                    """
+                    start_e = abs(temp - np.mean(simout[0:5, 2]))
+                    end_e = abs(temp - np.mean(simout[-5:, 2]))
+                    if start_e < end_e :
+                        self.J_ave[i] = 20000
+                        break
+                    """
+                    if sum( 1.15*temp < y for y in simout[:,2]) > 3 :
+                        self.J_ave[i] = 10000
+                        break
 
 
 
@@ -248,21 +260,21 @@ class ev_operators:
         self.pop_size = 6              # 5 parents
         self.gene_size = 3              # Kp, Ki, Kd
         self.rand_seed = 1023         # random number seed
-        #self.spread = 2                # spreading factor for intial guess
+        self.spread = 2                # spreading factor for intial guess
         self.max_iter = 20            # max iterations
 
         # variation operators
         #self.recomb_rate = 0.5
-        self.mut_rate = 0.2
+        self.mut_rate = 0.4
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 4
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.5, 50], [0.0, 5], [0.5, 1000.0]])
+        self.gain_limits = np.array([[0.5, 40], [0.0, 5], [0.5, 400.0]])
         #self.alpha = 1.0self.recomb_rate
 
-        self.fit_weights = [0.2, 0.8] #, 0.1]    # energy & error
+        self.fit_weights = [0.3, 0.7] #, 0.1]    # energy, ise, itae
 
         self.parents = self.pop_rand_init()
         self.children = np.zeros((np.shape(self.parents)))
@@ -283,12 +295,11 @@ class ev_operators:
         #np.random.seed(self.rand_seed)
         #idx = np.arange(size).reshape(size, 1)
         #pop = self.spread * np.random.standard_cauchy((self.pop_size, self.gene_size))
+        Ku = 15 * (1 + np.random.random(self.pop_size) - 0.5)
         pop = np.ones((self.pop_size, self.gene_size))
-        Kp = 0.3 * 100 * np.random.random(self.pop_size)
-        pop[:, 0] = Kp
-        pop[:, 1] = Kp / (150*np.random.random(self.pop_size))
-        pop[:, 2] = Kp * (100*np.random.random(self.pop_size))
-
+        pop[:, 0] = 0.2* Ku
+        pop[:, 1] = 0.4*Ku/300
+        pop[:, 2] = 0.2*Ku*300/3
         for i in range(self.pop_size):
             for j in range(self.gene_size):
                 if pop[i,j] > self.gain_limits[j, 1]:
@@ -340,7 +351,7 @@ class ev_operators:
 
         for i in range(len(pop[:,0])):
             for j in range(self.gene_size):
-                if float(np.random.random(1)) <= self.mut_rate:
+                if float(np.random.random(1)) >= self.mut_rate:
                     if self.mut_oper == "gaussian" :
                         dist =np.random.normal(0, step/math.sqrt(2.0/math.pi))
                         if j == 1: pop[i,j] +=  dist / 10
@@ -399,107 +410,20 @@ class ev_operators:
         '''
         return selection, Jout
 
-    def selection_comp(self, parent, Jparent, children, Jchildren, iter):
-
-        # selected genes, keeping population size the same
-        selection = np.zeros((self.pop_size, self.gene_size))
-        Jout = np.ones((np.shape(Jparent)))
-
-        # all genes, all fitnesses
-        totalPop = np.vstack((self.parents, self.children))
-        totalJ = np.vstack((Jparent, Jchildren))
-
-        # combine fitness and genes
-        genes_J = np.random.shuffle(np.concatenate((totalJ, totalPop), axis =1 ))
-
-        #print "before ordering: ", genomes
-
-        # draw matchups. have 0..N-1 items -> N/2 pairs
-        matches = np.random.choice(12, 12, replace=False)
-
-        for i in range(self.pop_size/2):
-            if genes_J[i, 0] <= genes_J(i+6, 0):
-                selection[i][:] = genes_J[i][1:1+self.gene_size]
-                Jout[i, 0] = genes_J[i, 0]
-            else:
-                selection[i][:] = genes_J[i+6][1:1+self.gene_size]
-                Jout[i, 0] = genes_J[i+6, 0]
-
-
     def selection_sus(self, parent, Jparent, children, Jchildren, iter):
         """
         Stochastic Universal samplingTime
         """
-        f = sum(Jparent) + sum(Jchildren)
-        n = self.pop_size
-        p = f / n
-        start = np.random.random() * p
-
-        points = []
-        for i in range(self.pop_size):
-            points.append(start + i * p )
-
-        selection = np.zeros((self.pop_size, self.gene_size))
-        index = 0
-
-
-
-        """
-
-RWS(Population, Points)
-    Keep = []
-    for P in Points
-        i := 0
-        while fitness sum of Population[0..i] < P
-            i++
-        add Population[i] to Keep
-    return Keep
-        for
-        public int[] execute(double[] population, int n) {
-            // Calculate total fitness of population
-            double f = 0.0;
-            for (double segment : population) {
-                f += segment;
-            }
-            // Calculate distance between the pointers
-            double p = f / n;
-            // Pick random number between 0 and p
-            double start = Math.random() * p;
-            // Pick n individuals
-            int[] individuals = new int[n];
-            int index = 0;
-            double sum = population[index];
-            for (int i = 0; i < n; i++) {
-                // Determine pointer to a segment in the population
-                double pointer = start + i * p;
-                // Find segment, which corresponds to the pointer
-                if (sum >= pointer) {
-                    individuals[i] = index;
-                } else {
-                    for (++index; index < population.length; index++) {
-                        sum += population[index];
-                        if (sum >= pointer) {
-                            individuals[i] = index;
-                            break;
-                        }
-                    }
-                }
-            }
-            // Return the set of indexes, pointing to the chosen individuals
-            return individuals;
-        }
-    }
-        """
 
     def queryGraph(self, num):
 
-        gdb_result = np.array([ [10.57, 0.0423, 390.65],
+        gdb_result = np.array([ [10.57, 0.0423, 39.65],
                             [7.5, 0.03, 85],
-                            [9.41, 0.01, 150.5],
-                            [5.13, 0.021, 405],
+                            [9.41, 0.01, 15.5],
+                            [5.13, 0.021, 105],
                             [14, 0.045, 245],
-                            [3, 0.02, 350],
-                            [4, 0, 90.1]
+                            [3, 0.02, 300],
+                            [4, 0, 50.1]
                          ])
 
         for i in range(1, num+1):
