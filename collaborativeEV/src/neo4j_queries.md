@@ -67,3 +67,54 @@ CREATE (a1:AC {brand: 'LEZETi', solar: 'yes', ducted: 'yes', power: 885, btu: 11
 CREATE (i:CU {type: 'Cooling', control: ['AC units'], sensing: ['AC power', 'DC power', 'temperature'], coms: 'MQTT', mac: 'b827ebe0f622'}) - [:CONTROLS] -> (a1)
 create (i) - [:SENSES] -> (a1)
 ```
+
+```java
+match (s) where ID(s) = 12 set s.mac = 'b827ebe0f633' return s
+match (s) where ID(s) = 13 set s.mac = 'b827ebe0f645' return s
+match (s) where ID(s) = 14 set s.mac = 'b827ebe0d633' return s
+match (s) where ID(s) = 15 set s.mac = 'b827ebe0f593' return s
+match (s) where ID(s) = 16 set s.mac = 'b827ebe0f599' return s
+
+match (s) where ID(s) = 23 return s
+
+```
+```java
+match (i:CU {mac: 'b827ebe0f622'}) - [c:CONTROLS] -> (:AC)
+match (i) - [s] -> (:AC) set c.kp = 2.0, c.ki = 0.02, c.kd = 259, c.sp = 54, c.ts = timestamp() - (1000*60*60*60*4), s.c = 46, s.pv = 54.8, s.P = 300, s.ts = timestamp() - (1000*60*60*60*4)
+return i, s, c
+
+
+
+match (i:CU {mac: 'b827ebe0f633'}) - [c:CONTROLS] -> (:AC)
+match (i) - [s] -> (:AC) set c.kp = 1.5, c.ki = 0.01, c.kd = 180, c.sp = 54, c.ts = timestamp() - (1000*60*60*60*4), s.c = 46, s.pv = 56.4, s.P = 400, s.ts = timestamp() - (1000*60*60*60*4)
+return i, s, c
+
+
+match (i:CU {mac: 'b827ebe0f645'}) - [c:CONTROLS] -> (:AC)
+match (i) - [s] -> (:AC) set c.kp = 4.0, c.ki = 0.15, c.kd = 290, c.sp = 48, c.ts = timestamp() - (1000*60*60*60*2), s.c = 85, s.pv = 56.4, s.P = 700, s.ts = timestamp() - (1000*60*60*60*2)
+return i, s, c
+
+
+match (i:CU {mac: 'b827ebe0d633'}) - [c:CONTROLS] -> (:AC)
+match (i) - [s] -> (:AC) set c.kp = 4.0, c.ki = 0.015, c.kd = 300, c.sp = 40, c.ts = timestamp() - (1000*60*60*60*2), s.c = 55, s.pv = 43, s.P = 800, s.ts = timestamp() - (1000*60*60*60*2)
+return i, s, c
+
+
+match (i:CU {mac: 'b827ebe0f599'}) - [c:CONTROLS] -> (:AC)
+match (i) - [s] -> (:AC) set c.kp = 10.0, c.ki = 0.8, c.kd = 300, c.sp = 40, c.ts = timestamp() - (1000*60*60*60*2), s.c = 120, s.pv = 49, s.P = 700, s.ts = timestamp() - (1000*60*60*60*2)
+return i, s, c
+
+match (i:CU {mac: 'b827ebe0f593'}) - [c:CONTROLS] -> (:AC)
+match (i) - [s] -> (:AC) set c.kp = 5.0, c.ki = 0.2, c.kd = 120, c.sp = 55, c.ts = timestamp() - (1000*60*60*60*3), s.c = 30, s.pv = 53, s.P = 50, s.ts = timestamp() - (1000*60*60*60*3)
+return i, s, c
+
+
+```
+
+```java
+match (i1:CU {mac: 'b827ebe0f622'}) - [c1:CONTROLS] - () - [] - () - [] - (o1:Object) - [] - () - [] - () - [c:CONTROLS] - (i:CU) return c.kp, c.ki, c.kd, c.sp
+
+match (i:CU) - [c:CONTROLS] - () - [] - (s:Space) where i.mac <> 'b827ebe0f622' and abs(s.volume -33.5) < 5 return c.kp, c.ki, c.kd, c.sp
+
+
+```

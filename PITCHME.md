@@ -14,7 +14,7 @@ How can we take advantage of existing technologies and known computational metho
 
 ## Use Case
 
-LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
+Using a LEZETi Hybrid Solar PV Mini Split Air Conditioner for Produce Cooling
 
 +++
 
