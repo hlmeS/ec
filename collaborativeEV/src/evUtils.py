@@ -227,11 +227,7 @@ class ev_fitness:
 
                     if self.debug: print self.J
 
-                else:
-
-
-
-
+            
             """ get average fitness across all cooling cycles """
             self.J_ave[i] = np.mean(self.J[i, :])
 
