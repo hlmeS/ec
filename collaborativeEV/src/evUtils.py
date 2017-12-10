@@ -250,7 +250,7 @@ class ev_operators:
         # variation operators
         #self.recomb_rate = 0.5
         self.mut_rate = 0.35
-        self.recomb_rate = 0.3
+        self.recomb_rate = 0.4
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 4
 
@@ -310,16 +310,16 @@ class ev_operators:
         offspring = np.ones((self.pop_size, self.gene_size))
 
 
-        idx = np.arange(psize).reshape(psize, 1)
-        offspring = np.concatenate((idx, np.zeros((psize, 3))), axis = 1)
+        #idx = np.arange(psize).reshape(psize, 1)
+        #offspring = np.concatenate((idx, np.zeros((psize, 3))), axis = 1)
 
         for i in range(self.pop_size):
-            if np.random.random() <= self.recomb_rate:
-                offspring[i][:] = self.parent[i][:]
+            if np.random.random() >= self.recomb_rate:
+                offspring[i][:] = self.parents[i][:]
             else :
-                parent1 = self.parent[i]
+                parent1 = self.parents[i]
                 #print 'parent1: ', parent1
-                parent2 = self.parent[np.random.randint(0, psize)]
+                parent2 = self.parents[np.random.randint(0, self.pop_size)]
                 #print 'parent2: ', parent2
                 XO_pt = np.random.randint(3)
                 for j in range(3):
@@ -417,7 +417,7 @@ class ev_operators:
         matches = np.random.choice(12, 12, replace=False)
 
         for i in range(self.pop_size/2):
-            if genes_J[i, 0] <= genes_J(i+6, 0):
+            if genes_J[i, 0] <= genes_J[i+6, 0]:
                 selection[i][:] = genes_J[i][1:1+self.gene_size]
                 Jout[i, 0] = genes_J[i, 0]
             else:
