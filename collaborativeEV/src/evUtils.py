@@ -408,21 +408,25 @@ class ev_operators:
         totalPop = np.vstack((self.parents, self.children))
         totalJ = np.vstack((Jparent, Jchildren))
 
+        #print "totalPop", totalPop
+        #print "totalJ", totalJ
         # combine fitness and genes
-        genes_J = np.random.shuffle(np.concatenate((totalJ, totalPop), axis =1 ))
-
+        genes_J = np.concatenate((totalJ, totalPop), axis =1 )
+        #print "genes_J_a: ", genes_J
+        np.random.shuffle(genes_J)
+        #print "genes_J: ", genes_J
         #print "before ordering: ", genomes
 
         # draw matchups. have 0..N-1 items -> N/2 pairs
         matches = np.random.choice(12, 12, replace=False)
 
         for i in range(self.pop_size/2):
-            if genes_J[i, 0] <= genes_J[i+6, 0]:
+            if genes_J[i][0] <= genes_J[i+4][0]:
                 selection[i][:] = genes_J[i][1:1+self.gene_size]
-                Jout[i, 0] = genes_J[i, 0]
+                Jout[i][0] = genes_J[i][0]
             else:
-                selection[i][:] = genes_J[i+6][1:1+self.gene_size]
-                Jout[i, 0] = genes_J[i+6, 0]
+                selection[i][:] = genes_J[i+4][1:1+self.gene_size]
+                Jout[i][0] = genes_J[i+4][0]
 
         return selection, Jout
 

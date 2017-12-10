@@ -54,7 +54,7 @@ def run_EV():
     #ctrl_temps = [tmax, setpoint, tmin]
     ctrl_temps = [tmax, setpoint]
     ctrl_params = [10, 200, 45, 350, 60, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
-    ctrl_interval = [20, 15]                              # mins
+    ctrl_interval = [20, 10]                              # mins
 
     # Evolutionary Parameters
     runtime = 12                                    # iterations
