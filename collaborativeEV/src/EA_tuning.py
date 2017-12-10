@@ -38,7 +38,7 @@ def run_EV():
         population after each mutation
     """
 
-    outputName = 'data/12082017_test1.csv'
+    outputName = 'data/12092017_test1.csv'
     outputFile = open(outputName, 'wb')
     with outputFile:
         writer = csv.writer(outputFile)
@@ -55,7 +55,7 @@ def run_EV():
     #ctrl_temps = [tmax, setpoint, tmin]
     ctrl_temps = [tmax, setpoint]
     ctrl_params = [10, 200, 45, 350, 60, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
-    ctrl_interval = [30, 20]                              # mins
+    ctrl_interval = [25, 15]                              # mins
 
     # Evolutionary Parameters
     runtime = 12                                    # iterations

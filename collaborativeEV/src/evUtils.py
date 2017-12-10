@@ -48,8 +48,8 @@ class ev_fitness:
         # placeholder for fitness values
         self.k = sum(x < 0 for x in np.diff(ctrl_temps))
         self.m = len(population)
-        self.J = 10000*np.ones((self.m,self.k))
-        self.J_ave = 10000*np.ones((self.m, 1))
+        self.J = 1e6*np.ones((self.m,self.k))
+        self.J_ave = 1e6*np.ones((self.m, 1))
         #J = np.concatenate((pop[:,0].reshape(psize,1), np.zeros((psize,1))), axis = 1)
         self.j_weights = fit_weights
 
@@ -80,9 +80,9 @@ class ev_fitness:
         t = simout[:, 2]
         ise = 0
         for i in range(1, len(t)-1):
-            ise += (y[i] - u[i])**2 * (t[i]-t[i-1])
+            ise += ((y[i] - u[i]))**2 * (t[i]-t[i-1])
 
-        return ise
+        return abs(ise)
 
     def iae_calc(self, simout):
         """
@@ -103,7 +103,7 @@ class ev_fitness:
         for i in range(1, len(t)-1):
             iae += abs(y[i] - u[i]) * (t[i]-t[i-1])
 
-        return iae
+        return abs(iae)
 
     def itae_calc(self, simout):
         """
@@ -118,9 +118,9 @@ class ev_fitness:
 
         itae = 0
         for i in range(1, len(t)-1):
-            itae += t[i] * abs(y[i] - u[i]) * abs(t[i]-t[i-1])
+            itae += t[i] * abs(y[i] - u[i]) * t[i]-t[i-1]
 
-        return itae
+        return abs(itae)
 
     def energy_calc(self, simout):
         """
@@ -137,7 +137,7 @@ class ev_fitness:
         al, power, energy]
         """
         #self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
-        self.J[i,k] = 0.7 * abs(self.iae_calc(simout) ) + 0.01 * self.itae_calc(simout) + 0.29 * self.ise_calc(simout)
+        self.J[i,k] = abs(0.7 * self.iae_calc(simout) + 0.01 * self.itae_calc(simout) + 0.29 * self.ise_calc(simout))
 
 
     def run_eval(self):
@@ -185,7 +185,7 @@ class ev_fitness:
                     # break if we don't get to the temperature within half the time at least
                     #if not 0.95*temp < np.mea n(simout[:, 2]) < 1.08*temp :
                     if sum( 0.97*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 30,000
+                        self.J_ave[i] = 1e6
                         break
 
                     if self.debug: print resp, "COOLING, Part 2, with ... ", self.population[i,:]
@@ -205,7 +205,7 @@ class ev_fitness:
                     #cnx = self.con.db_connect()
                     #nptime, simout = self.con.db_query(cnx, query)
                     self.J_eval(i, k, simout)
-                    if self.debug: print self.J[i, :]
+                    if self.debug: print self.J[i, k]
 
                     if self.debug2:
                         print nptime, simout
@@ -227,7 +227,7 @@ class ev_fitness:
 
                     if self.debug: print self.J
 
-            
+
             """ get average fitness across all cooling cycles """
             self.J_ave[i] = np.mean(self.J[i, :])
 
