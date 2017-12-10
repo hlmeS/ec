@@ -420,12 +420,12 @@ class ev_operators:
         # draw matchups. have 0..N-1 items -> N/2 pairs
         matches = np.random.choice(12, 12, replace=False)
 
-        for i in range(self.pop_size/2):
-            if genes_J[i][0] <= genes_J[i+4][0]:
+        for i in range(self.pop_size):
+            if genes_J[i][0] <= genes_J[i+6][0]:
                 selection[i][:] = genes_J[i][1:1+self.gene_size]
                 Jout[i][0] = genes_J[i][0]
             else:
-                selection[i][:] = genes_J[i+4][1:1+self.gene_size]
+                selection[i][:] = genes_J[i+6][1:1+self.gene_size]
                 Jout[i][0] = genes_J[i+4][0]
 
         return selection, Jout

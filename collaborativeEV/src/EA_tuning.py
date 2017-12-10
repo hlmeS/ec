@@ -47,7 +47,7 @@ def run_EV():
                         'Parent', 'Offspring'])
 
     # Control Parameters
-    tmax = 53                                       # Fahrenheit
+    tmax = 65                                       # Fahrenheit
     tmin = 48                                      # Fahrenheit
     setpoint = 50                                   # Fahrenheit
     #ctrl_temps = [tmax, setpoint, setpoint+10, tmin, tmax, setpoint]
