@@ -149,7 +149,7 @@ class ev_fitness:
         """
 
         """ gene population loop """
-        self.ctrl_temps[1] = np.random.normal(self.ctrl_temps[1], 1/math.sqrt(2.0/math.pi))
+        self.ctrl_temps[1] = np.random.normal(self.ctrl_temps[1], 0.75)
 
         for i in range(0, self.m):
             # put together control parameters , same across the different temperatures
