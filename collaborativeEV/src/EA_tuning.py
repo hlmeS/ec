@@ -38,7 +38,7 @@ def run_EV():
         population after each mutation
     """
 
-    outputName = 'data/12092017_test1.csv'
+    outputName = 'data/12092017_test2.csv'
     outputFile = open(outputName, 'wb')
     with outputFile:
         writer = csv.writer(outputFile)
