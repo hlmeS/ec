@@ -249,7 +249,8 @@ class ev_operators:
 
         # variation operators
         #self.recomb_rate = 0.5
-        self.mut_rate = 0.2
+        self.mut_rate = 0.35
+        self.recomb_rate = 0.3
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 4
 
@@ -305,27 +306,29 @@ class ev_operators:
         """
         Recombination of parent population to create
         same number of offsprings as there are parents.
+        """
+        offspring = np.ones((self.pop_size, self.gene_size))
 
-        psize = len(pop[:,0])
+
         idx = np.arange(psize).reshape(psize, 1)
         offspring = np.concatenate((idx, np.zeros((psize, 3))), axis = 1)
 
-        for i in range(psize):
-            if float(np.random.random(1) < recomb_rate):
-                offspring[i] = pop[i]
+        for i in range(self.pop_size):
+            if np.random.random() <= self.recomb_rate:
+                offspring[i][:] = self.parent[i][:]
             else :
-                parent1 = pop[i]
+                parent1 = self.parent[i]
                 #print 'parent1: ', parent1
-                parent2 = pop[np.random.randint(0, psize)]
+                parent2 = self.parent[np.random.randint(0, psize)]
                 #print 'parent2: ', parent2
-                XO_pt = np.random.randint(1, 3)
-                for j in range(1, 4):
+                XO_pt = np.random.randint(3)
+                for j in range(3):
                     #print 'xo-pt / j: ', XO_pt, j
                     offspring[i,j] = parent1[j] if j<= XO_pt else parent2[j]
                 #print 'offspring: ', offspring[i]
 
         return offspring
-        """
+
 
     def mutate(self, pop):
         """
@@ -395,7 +398,7 @@ class ev_operators:
         '''
         return selection, Jout
 
-    def selection_comp(self, parent, Jparent, children, Jchildren, iter):
+    def selection_comp(self, Jparent, Jchildren):
 
         # selected genes, keeping population size the same
         selection = np.zeros((self.pop_size, self.gene_size))
@@ -421,6 +424,7 @@ class ev_operators:
                 selection[i][:] = genes_J[i+6][1:1+self.gene_size]
                 Jout[i, 0] = genes_J[i+6, 0]
 
+        return selection, Jout
 
     def selection_sus(self, parent, Jparent, children, Jchildren, iter):
         """
@@ -491,12 +495,13 @@ RWS(Population, Points)
 
         gdb_result = np.array([ [10.57, 0.0423, 390.65],
                             [7.5, 0.03, 85],
-                            [9.41, 0.01, 150.5],
+                            [9.41, 0.0, 150.5],
                             [5.13, 0.021, 405],
-                            [14, 0.045, 245],
+                            [14, 2.1, 245],
                             [3, 0.02, 350],
-                            [4, 0, 90.1]
+                            [4, 5, 90.1]
                          ])
 
         for i in range(1, num+1):
-            self.parents[-i,:] = gdb_result[np.random.randint(len(gdb_result)), :]
+            # random parent will be exchanged
+            self.parents[np.random.randint(self.pop_size),:] = gdb_result[np.random.randint(len(gdb_result)), :]

@@ -44,8 +44,7 @@ def run_EV():
         writer = csv.writer(outputFile)
         writer.writerow(['Generationg', 'PJmin', 'PJmax', 'PJmean',
                         'OJmin', 'OJmax', 'OJmean',
-                        'P1', 'P2', 'P3', 'P4', 'P5', 'P6',
-                        'O1', 'O2', 'O3', 'O4', 'O5', 'O6'])
+                        'Parent', 'Offspring'])
 
     # Control Parameters
     tmax = 65                                       # Fahrenheit
@@ -98,6 +97,7 @@ def run_EV():
             evops.queryGraph(1)
 
         # mutation
+        evops.children = evops.recombine()
         evops.children = evops.mutate(evops.parents)
         if debug: print "Offspring Population ", i, " : ", evops.children
         evfit = evUtils.ev_fitness(evops.children, ctrl_temps, ctrl_interval, ctrl_params, evops.fit_weights, debug)
@@ -111,14 +111,14 @@ def run_EV():
             writer = csv.writer(outputFile)
             writer.writerow([i, np.min(Jparent), np.max(Jparent), np.mean(Jparent),
                             np.min(Jchildren), np.max(Jchildren), np.mean(Jchildren),
-                            evops.parents,
-                            evops.children
+                            str(evops.parents),
+                            str(evops.children)
                             ])
         # increase generation count,
         i += 1
 
         # selection of new generation (parents)
-        evops.parents, Jparent = evops.selection_trunc(Jparent, Jchildren)
+        evops.parents, Jparent = evops.selection_comp(Jparent, Jchildren)
 
         # calculate fitness
         #evfit = evUtils.ev_fitness(evops.parents, ctrl_temps, ctrl_interval, ctrl_params, evops.fit_weights, debug)
@@ -147,7 +147,7 @@ def run_EV():
         writer.writerow(["Final", np.min(Jparent), np.max(Jparent), np.mean(Jparent),
                         "", "", "",
                         evops.parents,
-                        "", "", "", "", "", ""
+                        ""
                         ])
 
 if __name__ == "__main__":
