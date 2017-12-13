@@ -118,7 +118,7 @@ class ev_fitness:
 
         itae = 0
         for i in range(1, len(t)-1):
-            itae += t[i] * abs(y[i] - u[i]) * t[i]-t[i-1]
+            itae += 1/1000.0 * (t[i] * abs(y[i] - u[i]) * t[i]-t[i-1])
 
         return abs(itae)
 
@@ -137,7 +137,7 @@ class ev_fitness:
         al, power, energy]
         """
         #self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
-        self.J[i,k] = abs(0.7 * self.iae_calc(simout) + 0.01 * self.itae_calc(simout) + 0.29 * self.ise_calc(simout))
+        self.J[i,k] = abs(0.6 * self.iae_calc(simout) + 0.2 * self.itae_calc(simout) + 0.2 * self.ise_calc(simout))
 
 
     def run_eval(self):
@@ -185,7 +185,7 @@ class ev_fitness:
                     # break if we don't get to the temperature within half the time at least
                     #if not 0.95*temp < np.mea n(simout[:, 2]) < 1.08*temp :
                     if sum( 0.97*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 1e6
+                        self.J_ave[i] = 1e9
                         break
 
                     if self.debug: print resp, "COOLING, Part 2, with ... ", self.population[i,:]
@@ -249,14 +249,14 @@ class ev_operators:
 
         # variation operators
         #self.recomb_rate = 0.5
-        self.mut_rate = 0.35
-        self.recomb_rate = 0.4
+        self.mut_rate = 0.35                # 0.35
+        self.recomb_rate = 0.2              # 0.4
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 4
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.5, 50], [0.0, 5], [0.5, 1000.0]])
+        self.gain_limits = np.array([[0.5, 50], [0.0, 0.05], [0.5, 1000.0]])
         #self.alpha = 1.0self.recomb_rate
 
         self.fit_weights = [0.2, 0.8] #, 0.1]    # energy & error
