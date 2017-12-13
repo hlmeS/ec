@@ -38,7 +38,7 @@ def run_EV():
         population after each mutation
     """
 
-    outputName = 'data/12092017_test2.csv'
+    outputName = 'data/12122017_test1.csv'
     outputFile = open(outputName, 'wb')
     with outputFile:
         writer = csv.writer(outputFile)
@@ -49,15 +49,15 @@ def run_EV():
     # Control Parameters
     tmax = 65                                       # Fahrenheit
     tmin = 48                                      # Fahrenheit
-    setpoint = 50                                   # Fahrenheit
+    setpoint = 53                                   # Fahrenheit
     #ctrl_temps = [tmax, setpoint, setpoint+10, tmin, tmax, setpoint]
     #ctrl_temps = [tmax, setpoint, tmin]
     ctrl_temps = [tmax, setpoint]
     ctrl_params = [10, 200, 45, 350, 60, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
-    ctrl_interval = [20, 10]                              # mins
+    ctrl_interval = [25, 10]                              # mins
 
     # Evolutionary Parameters
-    runtime = 12                                    # iterations
+    runtime = 8                                    # iterations
     debug = 1                                       # for printing to screen, turn off on server.
 
     # init ev operators class, which contains: parents, children, , just one until parallelized
@@ -92,9 +92,9 @@ def run_EV():
         # when i == 0, this is
 
         # Add immigrants to the parents
-        if not i % 2:
-            if debug: print "Should query graph DB"
-            evops.queryGraph(1)
+        #if not i % 2:
+        #    if debug: print "Should query graph DB"
+        #    evops.queryGraph(1)
 
         # mutation
         evops.children = evops.recombine()
