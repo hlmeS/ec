@@ -38,7 +38,7 @@ def run_EV():
         population after each mutation
     """
 
-    outputName = 'data/12122017_test1.csv'
+    outputName = 'data/12122017_test3.csv'
     outputFile = open(outputName, 'wb')
     with outputFile:
         writer = csv.writer(outputFile)
@@ -49,15 +49,15 @@ def run_EV():
     # Control Parameters
     tmax = 65                                       # Fahrenheit
     tmin = 48                                      # Fahrenheit
-    setpoint = 53                                   # Fahrenheit
+    setpoint = 52                                   # Fahrenheit
     #ctrl_temps = [tmax, setpoint, setpoint+10, tmin, tmax, setpoint]
     #ctrl_temps = [tmax, setpoint, tmin]
     ctrl_temps = [tmax, setpoint]
-    ctrl_params = [10, 200, 45, 350, 60, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
+    ctrl_params = [10, 200, 40, 350, 30, 2]         # valve_lower, valve_upper, valve_center, windup, sample time, dcmultiplier
     ctrl_interval = [25, 10]                              # mins
 
     # Evolutionary Parameters
-    runtime = 8                                    # iterations
+    runtime = 100                                    # iterations
     debug = 1                                       # for printing to screen, turn off on server.
 
     # init ev operators class, which contains: parents, children, , just one until parallelized
@@ -69,9 +69,9 @@ def run_EV():
     Jchildren = np.zeros((evops.pop_size+1, 1))
 
     # Fitness average and max over iterations
-    Jave = np.zeros((runtime, 1))
-    Jmin = np.zeros((runtime, 1))
-    Jmax = np.zeros((runtime, 1))
+    Jave = np.zeros((runtime+1, 1))
+    Jmin = np.zeros((runtime+1, 1))
+    Jmax = np.zeros((runtime+1, 1))
 
     # calc first fitness
     evfit = evUtils.ev_fitness(evops.parents, ctrl_temps, ctrl_interval, ctrl_params, evops.fit_weights, debug)

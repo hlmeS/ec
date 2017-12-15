@@ -1,0 +1,2220 @@
+Population 0:  [[  1.33458395e+01   4.15824636e-01   2.94640507e+02]
+ [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+ [  7.28968306e+00   8.17930436e-02   3.12378350e+02]
+ [  6.10132649e+00   6.35511376e-02   4.22475203e+02]
+ [  2.89117692e+01   7.52629250e-01   1.00000000e+03]
+ [  1.14937120e+01   2.18562079e-01   8.76761704e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 09:01:42.327802  ,  2017-12-10 09:26:42.327823
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4eff8059e0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  49.9538788747  Interval:  25  Timestamp:  2017-12-10 09:16:43.085172  ,  2017-12-10 09:41:43.085190
+<Response [200]> COOLING, Part 1, with ...  [  13.34583947    0.41582464  294.64050672]
+<ConfigParser.ConfigParser instance at 0x7f4f00059710>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  13.34583947    0.41582464  294.64050672]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb29518>
+Connecting to MySQL database...
+connection established.
+488643.402386
+[[  488643.40238631]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 09:41:14.176106  ,  2017-12-10 10:06:14.176124
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4effd3ec68>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  49.9538788747  Interval:  25  Timestamp:  2017-12-10 09:56:14.806711  ,  2017-12-10 10:21:14.806730
+<Response [200]> COOLING, Part 1, with ...  [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c4908>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5098>
+Connecting to MySQL database...
+connection established.
+748198.661839
+[[  488643.40238631]
+ [  748198.66183937]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 10:20:46.037372  ,  2017-12-10 10:45:46.037390
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5cb0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  49.9538788747  Interval:  25  Timestamp:  2017-12-10 10:35:46.596116  ,  2017-12-10 11:00:46.596135
+<Response [200]> COOLING, Part 1, with ...  [  7.28968306e+00   8.17930436e-02   3.12378350e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9d40>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  7.28968306e+00   8.17930436e-02   3.12378350e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c64d0>
+Connecting to MySQL database...
+connection established.
+1713598.94986
+[[  488643.40238631]
+ [  748198.66183937]
+ [ 1713598.94986137]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 11:00:17.940303  ,  2017-12-10 11:25:17.940321
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc128>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  49.9538788747  Interval:  25  Timestamp:  2017-12-10 11:15:18.484222  ,  2017-12-10 11:40:18.484240
+<Response [200]> COOLING, Part 1, with ...  [  6.10132649e+00   6.35511376e-02   4.22475203e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc290>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  6.10132649e+00   6.35511376e-02   4.22475203e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c65a8>
+Connecting to MySQL database...
+connection established.
+892823.556513
+[[  488643.40238631]
+ [  748198.66183937]
+ [ 1713598.94986137]
+ [  892823.55651273]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 11:39:49.679955  ,  2017-12-10 12:04:49.679973
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4ccb00>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  49.9538788747  Interval:  25  Timestamp:  2017-12-10 11:54:50.358741  ,  2017-12-10 12:19:50.358759
+<Response [200]> COOLING, Part 1, with ...  [  2.89117692e+01   7.52629250e-01   1.00000000e+03]
+<ConfigParser.ConfigParser instance at 0x7f4efc4be5a8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  2.89117692e+01   7.52629250e-01   1.00000000e+03]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5c20>
+Connecting to MySQL database...
+connection established.
+647857.303268
+[[  488643.40238631]
+ [  748198.66183937]
+ [ 1713598.94986137]
+ [  892823.55651273]
+ [  647857.30326848]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 12:19:21.514317  ,  2017-12-10 12:44:21.514335
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4effd3ec68>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  49.9538788747  Interval:  25  Timestamp:  2017-12-10 12:34:22.130604  ,  2017-12-10 12:59:22.130623
+<Response [200]> COOLING, Part 1, with ...  [  1.14937120e+01   2.18562079e-01   8.76761704e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cfd40>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  1.14937120e+01   2.18562079e-01   8.76761704e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d14d0>
+Connecting to MySQL database...
+connection established.
+2467536.0543
+[[  488643.40238631]
+ [  748198.66183937]
+ [ 1713598.94986137]
+ [  892823.55651273]
+ [  647857.30326848]
+ [ 2467536.05430424]]
+Population 0:  [[  1.33458395e+01   4.15824636e-01   2.94640507e+02]
+ [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+ [  7.28968306e+00   8.17930436e-02   3.12378350e+02]
+ [  6.10132649e+00   6.35511376e-02   4.22475203e+02]
+ [  2.89117692e+01   7.52629250e-01   1.00000000e+03]
+ [  1.14937120e+01   2.18562079e-01   8.76761704e+02]]
+Fitness :  [[  488643.40238631]
+ [  748198.66183937]
+ [ 1713598.94986137]
+ [  892823.55651273]
+ [  647857.30326848]
+ [ 2467536.05430424]]
+Mean:  [ 1159776.32136208]  Min [ 488643.40238631]
+Should query graph DB
+Offspring Population  0  :  [[  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  6.10132649e+00   0.00000000e+00   4.25849049e+02]
+ [  3.29231649e+01   8.38925691e-01   9.97637039e+02]
+ [  1.14937120e+01   2.18562079e-01   8.76761704e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 12:58:53.402106  ,  2017-12-10 13:23:53.402128
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb160e0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  48.5777304635  Interval:  25  Timestamp:  2017-12-10 13:13:53.991292  ,  2017-12-10 13:38:53.991310
+<Response [200]> COOLING, Part 1, with ...  [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1cb0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1bd8>
+Connecting to MySQL database...
+connection established.
+2166642.377
+[[ 2166642.37700424]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 13:38:25.394766  ,  2017-12-10 14:03:25.394783
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1368>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  48.5777304635  Interval:  25  Timestamp:  2017-12-10 13:53:25.979198  ,  2017-12-10 14:18:25.979217
+<Response [200]> COOLING, Part 1, with ...  [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5a70>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5f80>
+Connecting to MySQL database...
+connection established.
+1577998.58112
+[[ 2166642.37700424]
+ [ 1577998.58111601]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 14:17:57.325979  ,  2017-12-10 14:42:57.325997
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4be3f8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  48.5777304635  Interval:  25  Timestamp:  2017-12-10 14:32:57.909649  ,  2017-12-10 14:57:57.909667
+<Response [200]> COOLING, Part 1, with ...  [   7.28968306    0.          312.09208365]
+<ConfigParser.ConfigParser instance at 0x7f4efcb29320>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   7.28968306    0.          312.09208365]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4bc908>
+Connecting to MySQL database...
+connection established.
+2006803.20545
+[[ 2166642.37700424]
+ [ 1577998.58111601]
+ [ 2006803.20545385]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 14:57:29.130074  ,  2017-12-10 15:22:29.130092
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4bc128>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  48.5777304635  Interval:  25  Timestamp:  2017-12-10 15:12:29.827310  ,  2017-12-10 15:37:29.827329
+<Response [200]> COOLING, Part 1, with ...  [   6.10132649    0.          425.84904921]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c4b48>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   6.10132649    0.          425.84904921]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d82d8>
+Connecting to MySQL database...
+connection established.
+3912898.60495
+[[ 2166642.37700424]
+ [ 1577998.58111601]
+ [ 2006803.20545385]
+ [ 3912898.60495414]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 15:37:00.964342  ,  2017-12-10 16:02:00.964360
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4da098>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  48.5777304635  Interval:  25  Timestamp:  2017-12-10 15:52:01.612593  ,  2017-12-10 16:17:01.612612
+<Response [200]> COOLING, Part 1, with ...  [  3.29231649e+01   8.38925691e-01   9.97637039e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4da128>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  3.29231649e+01   8.38925691e-01   9.97637039e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8638>
+Connecting to MySQL database...
+connection established.
+2998408.92958
+[[ 2166642.37700424]
+ [ 1577998.58111601]
+ [ 2006803.20545385]
+ [ 3912898.60495414]
+ [ 2998408.92957663]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 16:16:32.823306  ,  2017-12-10 16:41:32.823324
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d85f0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  48.5777304635  Interval:  25  Timestamp:  2017-12-10 16:31:33.407892  ,  2017-12-10 16:56:33.407910
+<Response [200]> COOLING, Part 1, with ...  [  1.14937120e+01   2.18562079e-01   8.76761704e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4beea8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  1.14937120e+01   2.18562079e-01   8.76761704e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c6518>
+Connecting to MySQL database...
+connection established.
+3641103.63426
+[[ 2166642.37700424]
+ [ 1577998.58111601]
+ [ 2006803.20545385]
+ [ 3912898.60495414]
+ [ 2998408.92957663]
+ [ 3641103.63425694]]
+Offspring Population 0  :  [[  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  6.10132649e+00   0.00000000e+00   4.25849049e+02]
+ [  3.29231649e+01   8.38925691e-01   9.97637039e+02]
+ [  1.14937120e+01   2.18562079e-01   8.76761704e+02]]
+Fitness :  [[ 2166642.37700424]
+ [ 1577998.58111601]
+ [ 2006803.20545385]
+ [ 3912898.60495414]
+ [ 2998408.92957663]
+ [ 3641103.63425694]]
+Parent Population 1  :  [[  6.10132649e+00   0.00000000e+00   4.25849049e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  4.04309061e+00   2.80262564e-02   2.50918900e+02]
+ [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  4.04309061e+00   2.80262564e-02   2.50918900e+02]]
+Fitness :  [[  892823.55651273]
+ [ 2006803.20545385]
+ [ 3912898.60495414]
+ [ 2998408.92957663]
+ [  488643.40238631]
+ [ 1577998.58111601]]
+Mean:  [ 1979596.04666661]  Min:  [ 488643.40238631]
+Offspring Population  1  :  [[  6.10132649e+00   0.00000000e+00   4.25849049e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  3.00000000e+00   2.00000000e-02   3.63074637e+02]
+ [  5.00000000e-01   1.42794985e+00   2.50918900e+02]
+ [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  4.04309061e+00   0.00000000e+00   2.50918900e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 16:56:04.779165  ,  2017-12-10 17:21:04.779182
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5878>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  47.6977857699  Interval:  25  Timestamp:  2017-12-10 17:11:05.327222  ,  2017-12-10 17:36:05.327241
+<Response [200]> COOLING, Part 1, with ...  [   6.10132649    0.          425.84904921]
+<ConfigParser.ConfigParser instance at 0x7f4efc4ccef0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   6.10132649    0.          425.84904921]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc170>
+Connecting to MySQL database...
+connection established.
+3094998.9843
+[[ 3094998.9843014]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 17:35:36.602046  ,  2017-12-10 18:00:36.602063
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c4a70>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  47.6977857699  Interval:  25  Timestamp:  2017-12-10 17:50:37.239039  ,  2017-12-10 18:15:37.239057
+<Response [200]> COOLING, Part 1, with ...  [   7.28968306    0.          312.09208365]
+<ConfigParser.ConfigParser instance at 0x7f4efc4de830>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   7.28968306    0.          312.09208365]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4de2d8>
+Connecting to MySQL database...
+connection established.
+3437485.37405
+[[ 3094998.9843014 ]
+ [ 3437485.37404727]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 18:15:08.328543  ,  2017-12-10 18:40:08.328561
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4deea8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  47.6977857699  Interval:  25  Timestamp:  2017-12-10 18:30:09.160944  ,  2017-12-10 18:55:09.160963
+<Response [200]> COOLING, Part 1, with ...  [  3.00000000e+00   2.00000000e-02   3.63074637e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cfbd8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  3.00000000e+00   2.00000000e-02   3.63074637e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4cfb90>
+Connecting to MySQL database...
+connection established.
+3497750.46299
+[[ 3094998.9843014 ]
+ [ 3437485.37404727]
+ [ 3497750.46298699]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 18:54:40.413795  ,  2017-12-10 19:19:40.413813
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2f38>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  47.6977857699  Interval:  25  Timestamp:  2017-12-10 19:09:40.963888  ,  2017-12-10 19:34:40.963907
+<Response [200]> COOLING, Part 1, with ...  [   0.5           1.42794985  250.91889968]
+<ConfigParser.ConfigParser instance at 0x7f4efc4bea28>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           1.42794985  250.91889968]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c6b00>
+Connecting to MySQL database...
+connection established.
+2374934.92608
+[[ 3094998.9843014 ]
+ [ 3437485.37404727]
+ [ 3497750.46298699]
+ [ 2374934.92608368]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 19:34:12.269119  ,  2017-12-10 19:59:12.269137
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4bed88>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  47.6977857699  Interval:  25  Timestamp:  2017-12-10 19:49:12.822992  ,  2017-12-10 20:14:12.823011
+<Response [200]> COOLING, Part 1, with ...  [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc710>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9b00>
+Connecting to MySQL database...
+connection established.
+2207721.19302
+[[ 3094998.9843014 ]
+ [ 3437485.37404727]
+ [ 3497750.46298699]
+ [ 2374934.92608368]
+ [ 2207721.19301961]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 20:13:44.003899  ,  2017-12-10 20:38:44.003917
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9680>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  47.6977857699  Interval:  25  Timestamp:  2017-12-10 20:28:44.688504  ,  2017-12-10 20:53:44.688522
+<Response [200]> COOLING, Part 1, with ...  [   4.04309061    0.          250.91889968]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c92d8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   4.04309061    0.          250.91889968]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9dd0>
+Connecting to MySQL database...
+connection established.
+2718817.04091
+[[ 3094998.9843014 ]
+ [ 3437485.37404727]
+ [ 3497750.46298699]
+ [ 2374934.92608368]
+ [ 2207721.19301961]
+ [ 2718817.04091411]]
+Offspring Population 1  :  [[  6.10132649e+00   0.00000000e+00   4.25849049e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  3.00000000e+00   2.00000000e-02   3.63074637e+02]
+ [  5.00000000e-01   1.42794985e+00   2.50918900e+02]
+ [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  4.04309061e+00   0.00000000e+00   2.50918900e+02]]
+Fitness :  [[ 3094998.9843014 ]
+ [ 3437485.37404727]
+ [ 3497750.46298699]
+ [ 2374934.92608368]
+ [ 2207721.19301961]
+ [ 2718817.04091411]]
+Parent Population 2  :  [[  4.04309061e+00   0.00000000e+00   2.50918900e+02]
+ [  6.10132649e+00   0.00000000e+00   4.25849049e+02]
+ [  3.00000000e+00   2.00000000e-02   3.63074637e+02]
+ [  3.00000000e+00   2.00000000e-02   3.55300719e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  5.00000000e-01   1.42794985e+00   2.50918900e+02]]
+Fitness :  [[ 2718817.04091411]
+ [ 3094998.9843014 ]
+ [ 3497750.46298699]
+ [  488643.40238631]
+ [ 2006803.20545385]
+ [ 1577998.58111601]]
+Mean:  [ 2230835.27952645]  Min:  [ 488643.40238631]
+Should query graph DB
+Offspring Population  2  :  [[  1.21717617e+01   0.00000000e+00   2.50918900e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48931983e+02]
+ [  3.00000000e+00   4.00230599e-01   3.63074637e+02]
+ [  9.73711984e+00   4.23000000e-02   3.90650000e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  2.99962349e+01   1.42794985e+00   2.76791687e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 20:53:15.871778  ,  2017-12-10 21:18:15.871794
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c93b0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  48.406665249  Interval:  25  Timestamp:  2017-12-10 21:08:16.593607  ,  2017-12-10 21:33:16.593626
+<Response [200]> COOLING, Part 1, with ...  [  12.1717617     0.          250.91889968]
+<ConfigParser.ConfigParser instance at 0x7f4f00073170>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  12.1717617     0.          250.91889968]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4be488>
+Connecting to MySQL database...
+connection established.
+2377493.27677
+[[ 2377493.27676588]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 21:32:47.859443  ,  2017-12-10 21:57:47.859461
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4effd3ec68>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  48.406665249  Interval:  25  Timestamp:  2017-12-10 21:47:48.444709  ,  2017-12-10 22:12:48.444728
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.22751043  148.9319833 ]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2c20>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.22751043  148.9319833 ]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2a28>
+Connecting to MySQL database...
+connection established.
+1839012.4416
+[[ 2377493.27676588]
+ [ 1839012.4415963 ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 22:12:19.733562  ,  2017-12-10 22:37:19.733580
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb29560>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  48.406665249  Interval:  25  Timestamp:  2017-12-10 22:27:20.359253  ,  2017-12-10 22:52:20.359271
+<Response [200]> COOLING, Part 1, with ...  [   3.            0.4002306   363.07463686]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7a28>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   3.            0.4002306   363.07463686]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7b48>
+Connecting to MySQL database...
+connection established.
+1890836.548
+[[ 2377493.27676588]
+ [ 1839012.4415963 ]
+ [ 1890836.54800028]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 22:51:51.588452  ,  2017-12-10 23:16:51.588469
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c26c8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  48.406665249  Interval:  25  Timestamp:  2017-12-10 23:06:52.287960  ,  2017-12-10 23:31:52.287979
+<Response [200]> COOLING, Part 1, with ...  [  9.73711984e+00   4.23000000e-02   3.90650000e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c2830>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  9.73711984e+00   4.23000000e-02   3.90650000e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7c68>
+Connecting to MySQL database...
+connection established.
+1487114.01846
+[[ 2377493.27676588]
+ [ 1839012.4415963 ]
+ [ 1890836.54800028]
+ [ 1487114.01845689]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-10 23:31:23.434943  ,  2017-12-10 23:56:23.434960
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7320>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  48.406665249  Interval:  25  Timestamp:  2017-12-10 23:46:24.047129  ,  2017-12-11 00:11:24.047148
+<Response [200]> COOLING, Part 1, with ...  [   7.28968306    0.          312.09208365]
+<ConfigParser.ConfigParser instance at 0x7f4effd3ed88>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   7.28968306    0.          312.09208365]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c6c68>
+Connecting to MySQL database...
+connection established.
+2276130.59594
+[[ 2377493.27676588]
+ [ 1839012.4415963 ]
+ [ 1890836.54800028]
+ [ 1487114.01845689]
+ [ 2276130.59593975]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 00:10:55.305744  ,  2017-12-11 00:35:55.305762
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4be8c0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  48.406665249  Interval:  25  Timestamp:  2017-12-11 00:25:55.895496  ,  2017-12-11 00:50:55.895515
+<Response [200]> COOLING, Part 1, with ...  [  29.99623491    1.42794985  276.79168659]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d35f0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  29.99623491    1.42794985  276.79168659]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d3c68>
+Connecting to MySQL database...
+connection established.
+1785519.48545
+[[ 2377493.27676588]
+ [ 1839012.4415963 ]
+ [ 1890836.54800028]
+ [ 1487114.01845689]
+ [ 2276130.59593975]
+ [ 1785519.48544787]]
+Offspring Population 2  :  [[  1.21717617e+01   0.00000000e+00   2.50918900e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48931983e+02]
+ [  3.00000000e+00   4.00230599e-01   3.63074637e+02]
+ [  9.73711984e+00   4.23000000e-02   3.90650000e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  2.99962349e+01   1.42794985e+00   2.76791687e+02]]
+Fitness :  [[ 2377493.27676588]
+ [ 1839012.4415963 ]
+ [ 1890836.54800028]
+ [ 1487114.01845689]
+ [ 2276130.59593975]
+ [ 1785519.48544787]]
+Parent Population 3  :  [[  9.73711984e+00   4.23000000e-02   3.90650000e+02]
+ [  2.99962349e+01   1.42794985e+00   2.76791687e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48931983e+02]
+ [  9.73711984e+00   4.23000000e-02   3.90650000e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  1.21717617e+01   0.00000000e+00   2.50918900e+02]]
+Fitness :  [[ 2377493.27676588]
+ [ 1785519.48544787]
+ [  488643.40238631]
+ [ 2006803.20545385]
+ [ 1839012.4415963 ]
+ [ 2718817.04091411]]
+Mean:  [ 1869381.47542739]  Min:  [ 488643.40238631]
+Offspring Population  3  :  [[  9.73711984e+00   4.23000000e-02   4.10912634e+02]
+ [  5.00000000e+01   1.42794985e+00   2.76791687e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48519274e+02]
+ [  5.00000000e-01   4.23000000e-02   3.90650000e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  1.21717617e+01   0.00000000e+00   2.50918900e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 00:50:27.236196  ,  2017-12-11 01:15:27.236213
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb29b90>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  48.6057073612  Interval:  25  Timestamp:  2017-12-11 01:05:27.790297  ,  2017-12-11 01:30:27.790316
+<Response [200]> COOLING, Part 1, with ...  [  9.73711984e+00   4.23000000e-02   4.10912634e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc368>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  9.73711984e+00   4.23000000e-02   4.10912634e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc0e0>
+Connecting to MySQL database...
+connection established.
+1839856.23798
+[[ 1839856.2379805]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 01:29:58.992897  ,  2017-12-11 01:54:58.992915
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4ccf80>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  48.6057073612  Interval:  25  Timestamp:  2017-12-11 01:44:59.634680  ,  2017-12-11 02:09:59.634699
+<Response [200]> COOLING, Part 1, with ...  [  50.            1.42794985  276.79168659]
+<ConfigParser.ConfigParser instance at 0x7f4efcb27248>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  50.            1.42794985  276.79168659]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc9e0>
+Connecting to MySQL database...
+connection established.
+1092491.20499
+[[ 1839856.2379805 ]
+ [ 1092491.20498725]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 02:09:30.784517  ,  2017-12-11 02:34:30.784535
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc830>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  48.6057073612  Interval:  25  Timestamp:  2017-12-11 02:24:31.394405  ,  2017-12-11 02:49:31.394424
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.22751043  148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c57a0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.22751043  148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c6638>
+Connecting to MySQL database...
+connection established.
+3091182.1697
+[[ 1839856.2379805 ]
+ [ 1092491.20498725]
+ [ 3091182.16970092]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 02:49:02.659527  ,  2017-12-11 03:14:02.659545
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c5998>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  48.6057073612  Interval:  25  Timestamp:  2017-12-11 03:04:03.247817  ,  2017-12-11 03:29:03.247836
+<Response [200]> COOLING, Part 1, with ...  [  5.00000000e-01   4.23000000e-02   3.90650000e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1680>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  5.00000000e-01   4.23000000e-02   3.90650000e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8ef0>
+Connecting to MySQL database...
+connection established.
+2362703.08553
+[[ 1839856.2379805 ]
+ [ 1092491.20498725]
+ [ 3091182.16970092]
+ [ 2362703.0855292 ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 03:28:34.681771  ,  2017-12-11 03:53:34.681789
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4effd3ed88>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  48.6057073612  Interval:  25  Timestamp:  2017-12-11 03:43:35.233291  ,  2017-12-11 04:08:35.233310
+<Response [200]> COOLING, Part 1, with ...  [   7.28968306    0.          312.09208365]
+<ConfigParser.ConfigParser instance at 0x7f4f00059b00>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   7.28968306    0.          312.09208365]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4f00059ab8>
+Connecting to MySQL database...
+connection established.
+2203073.65258
+[[ 1839856.2379805 ]
+ [ 1092491.20498725]
+ [ 3091182.16970092]
+ [ 2362703.0855292 ]
+ [ 2203073.65257632]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 04:08:06.522766  ,  2017-12-11 04:33:06.522784
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb27cf8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  48.6057073612  Interval:  25  Timestamp:  2017-12-11 04:23:07.164439  ,  2017-12-11 04:48:07.164457
+<Response [200]> COOLING, Part 1, with ...  [  12.1717617     0.          250.91889968]
+<ConfigParser.ConfigParser instance at 0x7f4efc4ded88>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  12.1717617     0.          250.91889968]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8320>
+Connecting to MySQL database...
+connection established.
+3897827.88233
+[[ 1839856.2379805 ]
+ [ 1092491.20498725]
+ [ 3091182.16970092]
+ [ 2362703.0855292 ]
+ [ 2203073.65257632]
+ [ 3897827.88233167]]
+Offspring Population 3  :  [[  9.73711984e+00   4.23000000e-02   4.10912634e+02]
+ [  5.00000000e+01   1.42794985e+00   2.76791687e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48519274e+02]
+ [  5.00000000e-01   4.23000000e-02   3.90650000e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  1.21717617e+01   0.00000000e+00   2.50918900e+02]]
+Fitness :  [[ 1839856.2379805 ]
+ [ 1092491.20498725]
+ [ 3091182.16970092]
+ [ 2362703.0855292 ]
+ [ 2203073.65257632]
+ [ 3897827.88233167]]
+Parent Population 4  :  [[  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  9.73711984e+00   4.23000000e-02   4.10912634e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48519274e+02]
+ [  5.00000000e+01   1.42794985e+00   2.76791687e+02]
+ [  7.28968306e+00   0.00000000e+00   3.12092084e+02]
+ [  5.00000000e-01   2.27510428e-01   1.48519274e+02]]
+Fitness :  [[ 2203073.65257632]
+ [ 1839856.2379805 ]
+ [ 1839012.4415963 ]
+ [ 1785519.48544787]
+ [ 2203073.65257632]
+ [ 2377493.27676588]]
+Mean:  [ 2041338.12449053]  Min:  [ 1785519.48544787]
+Should query graph DB
+Offspring Population  4  :  [[  1.61783741e+01   0.00000000e+00   3.12092084e+02]
+ [  5.00000000e+01   4.23000000e-02   4.10912634e+02]
+ [  5.00000000e-01   2.27510428e-01   1.47874616e+02]
+ [  4.41531902e+01   1.42794985e+00   2.80056801e+02]
+ [  7.50000000e+00   2.25450965e+00   8.47677370e+01]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 04:47:38.285382  ,  2017-12-11 05:12:38.285398
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8bd8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  49.4366533693  Interval:  25  Timestamp:  2017-12-11 05:02:38.993686  ,  2017-12-11 05:27:38.993704
+<Response [200]> COOLING, Part 1, with ...  [  16.17837409    0.          312.09208365]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2cf8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  16.17837409    0.          312.09208365]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1ef0>
+Connecting to MySQL database...
+connection established.
+1496932.29178
+[[ 1496932.29178108]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 05:27:10.249980  ,  2017-12-11 05:52:10.249999
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb29b48>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  49.4366533693  Interval:  25  Timestamp:  2017-12-11 05:42:10.800216  ,  2017-12-11 06:07:10.800234
+<Response [200]> COOLING, Part 1, with ...  [  5.00000000e+01   4.23000000e-02   4.10912634e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc3b0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  5.00000000e+01   4.23000000e-02   4.10912634e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4bef38>
+Connecting to MySQL database...
+connection established.
+1531462.58515
+[[ 1496932.29178108]
+ [ 1531462.58515367]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 06:06:42.145944  ,  2017-12-11 06:31:42.145962
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4cf3f8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  49.4366533693  Interval:  25  Timestamp:  2017-12-11 06:21:42.757551  ,  2017-12-11 06:46:42.757570
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.22751043  147.87461608]
+<ConfigParser.ConfigParser instance at 0x7f4efc4bef80>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.22751043  147.87461608]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4be908>
+Connecting to MySQL database...
+connection established.
+1415804.06952
+[[ 1496932.29178108]
+ [ 1531462.58515367]
+ [ 1415804.06952407]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 06:46:13.958939  ,  2017-12-11 07:11:13.958957
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4be248>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  49.4366533693  Interval:  25  Timestamp:  2017-12-11 07:01:14.632258  ,  2017-12-11 07:26:14.632277
+<Response [200]> COOLING, Part 1, with ...  [  44.15319025    1.42794985  280.05680087]
+<ConfigParser.ConfigParser instance at 0x7f4efcb16bd8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  44.15319025    1.42794985  280.05680087]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d27e8>
+Connecting to MySQL database...
+connection established.
+1060371.26199
+[[ 1496932.29178108]
+ [ 1531462.58515367]
+ [ 1415804.06952407]
+ [ 1060371.26198654]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 07:25:45.780993  ,  2017-12-11 07:50:45.781011
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2908>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  49.4366533693  Interval:  25  Timestamp:  2017-12-11 07:40:46.427617  ,  2017-12-11 08:05:46.427636
+<Response [200]> COOLING, Part 1, with ...  [  7.5          2.25450965  84.76773697]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2950>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  7.5          2.25450965  84.76773697]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2f80>
+Connecting to MySQL database...
+connection established.
+912860.523154
+[[ 1496932.29178108]
+ [ 1531462.58515367]
+ [ 1415804.06952407]
+ [ 1060371.26198654]
+ [  912860.52315365]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 08:05:17.757236  ,  2017-12-11 08:30:17.757259
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb16c20>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  49.4366533693  Interval:  25  Timestamp:  2017-12-11 08:20:18.468708  ,  2017-12-11 08:45:18.468727
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efc4be680>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4be5f0>
+Connecting to MySQL database...
+connection established.
+1427540.08469
+[[ 1496932.29178108]
+ [ 1531462.58515367]
+ [ 1415804.06952407]
+ [ 1060371.26198654]
+ [  912860.52315365]
+ [ 1427540.0846884 ]]
+Offspring Population 4  :  [[  1.61783741e+01   0.00000000e+00   3.12092084e+02]
+ [  5.00000000e+01   4.23000000e-02   4.10912634e+02]
+ [  5.00000000e-01   2.27510428e-01   1.47874616e+02]
+ [  4.41531902e+01   1.42794985e+00   2.80056801e+02]
+ [  7.50000000e+00   2.25450965e+00   8.47677370e+01]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]]
+Fitness :  [[ 1496932.29178108]
+ [ 1531462.58515367]
+ [ 1415804.06952407]
+ [ 1060371.26198654]
+ [  912860.52315365]
+ [ 1427540.0846884 ]]
+Parent Population 5  :  [[  1.61783741e+01   0.00000000e+00   3.12092084e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  4.41531902e+01   1.42794985e+00   2.80056801e+02]
+ [  4.41531902e+01   1.42794985e+00   2.80056801e+02]
+ [  5.00000000e-01   2.27510428e-01   1.47874616e+02]
+ [  7.50000000e+00   2.25450965e+00   8.47677370e+01]]
+Fitness :  [[ 1496932.29178108]
+ [ 1427540.0846884 ]
+ [ 1060371.26198654]
+ [ 1785519.48544787]
+ [ 1839012.4415963 ]
+ [  912860.52315365]]
+Mean:  [ 1420372.68144231]  Min:  [ 912860.52315365]
+Offspring Population  5  :  [[  16.17837409    0.          307.69086855]
+ [   0.5           0.          148.51927415]
+ [  44.15319025    1.45785099  265.50695102]
+ [  32.99701665    1.42794985  280.05680087]
+ [   0.5           0.45398003  145.40526551]
+ [  23.50382412    2.25450965   86.45613207]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 08:44:49.756486  ,  2017-12-11 09:09:49.756502
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8830>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  49.0572767173  Interval:  25  Timestamp:  2017-12-11 08:59:50.347395  ,  2017-12-11 09:24:50.347415
+<Response [200]> COOLING, Part 1, with ...  [  16.17837409    0.          307.69086855]
+<ConfigParser.ConfigParser instance at 0x7f4efc4defc8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  16.17837409    0.          307.69086855]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4de680>
+Connecting to MySQL database...
+connection established.
+2057855.85309
+[[ 2057855.8530936]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 09:24:21.708473  ,  2017-12-11 09:49:21.708491
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4f0008b440>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  49.0572767173  Interval:  25  Timestamp:  2017-12-11 09:39:22.299506  ,  2017-12-11 10:04:22.299525
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4f00059c68>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4de488>
+Connecting to MySQL database...
+connection established.
+968736.8051
+[[ 2057855.8530936 ]
+ [  968736.80509961]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 10:03:53.467855  ,  2017-12-11 10:28:53.467873
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4de950>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  49.0572767173  Interval:  25  Timestamp:  2017-12-11 10:18:54.082274  ,  2017-12-11 10:43:54.082293
+<Response [200]> COOLING, Part 1, with ...  [  44.15319025    1.45785099  265.50695102]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8cb0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  44.15319025    1.45785099  265.50695102]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d87a0>
+Connecting to MySQL database...
+connection established.
+1834647.23329
+[[ 2057855.8530936 ]
+ [  968736.80509961]
+ [ 1834647.23328936]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 10:43:25.206905  ,  2017-12-11 11:08:25.206923
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4f0008a758>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  49.0572767173  Interval:  25  Timestamp:  2017-12-11 10:58:25.819118  ,  2017-12-11 11:23:25.819137
+<Response [200]> COOLING, Part 1, with ...  [  32.99701665    1.42794985  280.05680087]
+<ConfigParser.ConfigParser instance at 0x7f4efcb160e0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  32.99701665    1.42794985  280.05680087]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c13f8>
+Connecting to MySQL database...
+connection established.
+795631.565567
+[[ 2057855.8530936 ]
+ [  968736.80509961]
+ [ 1834647.23328936]
+ [  795631.56556666]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 11:22:57.063497  ,  2017-12-11 11:47:57.063515
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4be440>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  49.0572767173  Interval:  25  Timestamp:  2017-12-11 11:37:57.622196  ,  2017-12-11 12:02:57.622215
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.45398003  145.40526551]
+<ConfigParser.ConfigParser instance at 0x7f4efcb29320>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.45398003  145.40526551]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb29050>
+Connecting to MySQL database...
+connection established.
+1645830.21244
+[[ 2057855.8530936 ]
+ [  968736.80509961]
+ [ 1834647.23328936]
+ [  795631.56556666]
+ [ 1645830.212443  ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 12:02:28.971303  ,  2017-12-11 12:27:28.971321
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb29ef0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  49.0572767173  Interval:  25  Timestamp:  2017-12-11 12:17:29.524762  ,  2017-12-11 12:42:29.524780
+<Response [200]> COOLING, Part 1, with ...  [ 23.50382412   2.25450965  86.45613207]
+<ConfigParser.ConfigParser instance at 0x7f4eff7f4b00>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [ 23.50382412   2.25450965  86.45613207]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4eff7f4ef0>
+Connecting to MySQL database...
+connection established.
+3305876.89741
+[[ 2057855.8530936 ]
+ [  968736.80509961]
+ [ 1834647.23328936]
+ [  795631.56556666]
+ [ 1645830.212443  ]
+ [ 3305876.89740841]]
+Offspring Population 5  :  [[  16.17837409    0.          307.69086855]
+ [   0.5           0.          148.51927415]
+ [  44.15319025    1.45785099  265.50695102]
+ [  32.99701665    1.42794985  280.05680087]
+ [   0.5           0.45398003  145.40526551]
+ [  23.50382412    2.25450965   86.45613207]]
+Fitness :  [[ 2057855.8530936 ]
+ [  968736.80509961]
+ [ 1834647.23328936]
+ [  795631.56556666]
+ [ 1645830.212443  ]
+ [ 3305876.89740841]]
+Parent Population 6  :  [[  32.99701665    1.42794985  280.05680087]
+ [   0.5           0.          148.51927415]
+ [  16.17837409    0.          307.69086855]
+ [  32.99701665    1.42794985  280.05680087]
+ [   0.5           0.          148.51927415]
+ [  23.50382412    2.25450965   86.45613207]]
+Fitness :  [[  795631.56556666]
+ [ 1427540.0846884 ]
+ [ 1496932.29178108]
+ [ 1785519.48544787]
+ [  968736.80509961]
+ [  912860.52315365]]
+Mean:  [ 1231203.45928954]  Min:  [ 795631.56556666]
+Should query graph DB
+Offspring Population  6  :  [[  3.15078266e+01   1.42794985e+00   2.64871862e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  1.61783741e+01   0.00000000e+00   3.07690869e+02]
+ [  3.29970166e+01   1.42794985e+00   2.80056801e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  4.47760805e+01   3.00000000e-02   8.50000000e+01]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 12:42:00.679224  ,  2017-12-11 13:07:00.679240
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4eff7f4c20>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  50.6956715399  Interval:  25  Timestamp:  2017-12-11 12:57:01.296411  ,  2017-12-11 13:22:01.296430
+<Response [200]> COOLING, Part 1, with ...  [  31.50782657    1.42794985  264.87186182]
+<ConfigParser.ConfigParser instance at 0x7f4efc4bed40>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  31.50782657    1.42794985  264.87186182]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4da710>
+Connecting to MySQL database...
+connection established.
+4116120.69427
+[[ 4116120.69427109]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 13:21:32.450352  ,  2017-12-11 13:46:32.450370
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb22b00>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  50.6956715399  Interval:  25  Timestamp:  2017-12-11 13:36:33.116574  ,  2017-12-11 14:01:33.116593
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8518>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4de3b0>
+Connecting to MySQL database...
+connection established.
+3064480.91032
+[[ 4116120.69427109]
+ [ 3064480.91031548]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 14:01:04.323234  ,  2017-12-11 14:26:04.323252
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb22e18>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  50.6956715399  Interval:  25  Timestamp:  2017-12-11 14:16:04.871527  ,  2017-12-11 14:41:04.871546
+<Response [200]> COOLING, Part 1, with ...  [  16.17837409    0.          307.69086855]
+<ConfigParser.ConfigParser instance at 0x7f4efcb22320>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  16.17837409    0.          307.69086855]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb220e0>
+Connecting to MySQL database...
+connection established.
+13316011.8347
+[[  4116120.69427109]
+ [  3064480.91031548]
+ [ 13316011.83473437]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 14:40:36.176791  ,  2017-12-11 15:05:36.176809
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb22b00>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  50.6956715399  Interval:  25  Timestamp:  2017-12-11 14:55:36.735364  ,  2017-12-11 15:20:36.735382
+<Response [200]> COOLING, Part 1, with ...  [  32.99701665    1.42794985  280.05680087]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cccf8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  32.99701665    1.42794985  280.05680087]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4ccf38>
+Connecting to MySQL database...
+connection established.
+1912780.69786
+[[  4116120.69427109]
+ [  3064480.91031548]
+ [ 13316011.83473437]
+ [  1912780.69785796]
+ [  1000000.        ]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 15:20:08.080073  ,  2017-12-11 15:45:08.080092
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4deea8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  50.6956715399  Interval:  25  Timestamp:  2017-12-11 15:35:08.776140  ,  2017-12-11 16:00:08.776159
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efcb27440>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb27b00>
+Connecting to MySQL database...
+connection established.
+2817171.94212
+[[  4116120.69427109]
+ [  3064480.91031548]
+ [ 13316011.83473437]
+ [  1912780.69785796]
+ [  2817171.94211808]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 15:59:39.960886  ,  2017-12-11 16:24:39.960904
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4be4d0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  50.6956715399  Interval:  25  Timestamp:  2017-12-11 16:14:40.611848  ,  2017-12-11 16:39:40.611866
+<Response [200]> COOLING, Part 1, with ...  [  4.47760805e+01   3.00000000e-02   8.50000000e+01]
+<ConfigParser.ConfigParser instance at 0x7f4effd3ef80>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  4.47760805e+01   3.00000000e-02   8.50000000e+01]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4effd3ee18>
+Connecting to MySQL database...
+connection established.
+1361185.22608
+[[  4116120.69427109]
+ [  3064480.91031548]
+ [ 13316011.83473437]
+ [  1912780.69785796]
+ [  2817171.94211808]
+ [  1361185.22608252]]
+Offspring Population 6  :  [[  3.15078266e+01   1.42794985e+00   2.64871862e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  1.61783741e+01   0.00000000e+00   3.07690869e+02]
+ [  3.29970166e+01   1.42794985e+00   2.80056801e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  4.47760805e+01   3.00000000e-02   8.50000000e+01]]
+Fitness :  [[  4116120.69427109]
+ [  3064480.91031548]
+ [ 13316011.83473437]
+ [  1912780.69785796]
+ [  2817171.94211808]
+ [  1361185.22608252]]
+Parent Population 7  :  [[  4.47760805e+01   3.00000000e-02   8.50000000e+01]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  3.29970166e+01   1.42794985e+00   2.80056801e+02]
+ [  3.15078266e+01   1.42794985e+00   2.64871862e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]]
+Fitness :  [[ 1361185.22608252]
+ [ 1427540.0846884 ]
+ [ 1496932.29178108]
+ [  795631.56556666]
+ [ 3064480.91031548]
+ [  968736.80509961]]
+Mean:  [ 1519084.48058896]  Min:  [ 795631.56556666]
+Offspring Population  7  :  [[  44.77608054    3.54145683   85.        ]
+ [   0.5           0.          148.51927415]
+ [  32.99701665    1.54673577  280.05680087]
+ [  31.50782657    1.42794985  264.87186182]
+ [   0.5           0.41387162  145.90293107]
+ [   0.5           0.          148.51927415]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 16:39:11.873751  ,  2017-12-11 17:04:11.873767
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4effd3ef80>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  51.3617014603  Interval:  25  Timestamp:  2017-12-11 16:54:12.435018  ,  2017-12-11 17:19:12.435036
+<Response [200]> COOLING, Part 1, with ...  [ 44.77608054   3.54145683  85.        ]
+<ConfigParser.ConfigParser instance at 0x7f4f000732d8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [ 44.77608054   3.54145683  85.        ]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4f00090bd8>
+Connecting to MySQL database...
+connection established.
+2382804.72826
+[[ 2382804.72826066]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 17:18:43.873304  ,  2017-12-11 17:43:43.873322
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4de488>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  51.3617014603  Interval:  25  Timestamp:  2017-12-11 17:33:44.475889  ,  2017-12-11 17:58:44.475908
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8368>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb27c68>
+Connecting to MySQL database...
+connection established.
+1087016.52609
+[[ 2382804.72826066]
+ [ 1087016.52608914]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 17:58:15.733359  ,  2017-12-11 18:23:15.733377
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc908>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  51.3617014603  Interval:  25  Timestamp:  2017-12-11 18:13:16.351835  ,  2017-12-11 18:38:16.351853
+<Response [200]> COOLING, Part 1, with ...  [  32.99701665    1.54673577  280.05680087]
+<ConfigParser.ConfigParser instance at 0x7f4efc4be560>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  32.99701665    1.54673577  280.05680087]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4beb48>
+Connecting to MySQL database...
+connection established.
+1389348.94486
+[[ 2382804.72826066]
+ [ 1087016.52608914]
+ [ 1389348.94485602]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 18:37:47.540104  ,  2017-12-11 19:02:47.540122
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4be2d8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  51.3617014603  Interval:  25  Timestamp:  2017-12-11 18:52:48.266923  ,  2017-12-11 19:17:48.266942
+<Response [200]> COOLING, Part 1, with ...  [  31.50782657    1.42794985  264.87186182]
+<ConfigParser.ConfigParser instance at 0x7f4f00059758>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  31.50782657    1.42794985  264.87186182]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4be758>
+Connecting to MySQL database...
+connection established.
+803487.747295
+[[ 2382804.72826066]
+ [ 1087016.52608914]
+ [ 1389348.94485602]
+ [  803487.74729451]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 19:17:19.430272  ,  2017-12-11 19:42:19.430290
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4bed40>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  51.3617014603  Interval:  25  Timestamp:  2017-12-11 19:32:20.031820  ,  2017-12-11 19:57:20.031839
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.41387162  145.90293107]
+<ConfigParser.ConfigParser instance at 0x7f4f00075bd8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.41387162  145.90293107]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4f00090bd8>
+Connecting to MySQL database...
+connection established.
+1364344.44686
+[[ 2382804.72826066]
+ [ 1087016.52608914]
+ [ 1389348.94485602]
+ [  803487.74729451]
+ [ 1364344.446855  ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 19:56:51.375909  ,  2017-12-11 20:21:51.375927
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1488>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  51.3617014603  Interval:  25  Timestamp:  2017-12-11 20:11:51.971201  ,  2017-12-11 20:36:51.971220
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c95f0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9b90>
+Connecting to MySQL database...
+connection established.
+1131864.2198
+[[ 2382804.72826066]
+ [ 1087016.52608914]
+ [ 1389348.94485602]
+ [  803487.74729451]
+ [ 1364344.446855  ]
+ [ 1131864.21979566]]
+Offspring Population 7  :  [[  44.77608054    3.54145683   85.        ]
+ [   0.5           0.          148.51927415]
+ [  32.99701665    1.54673577  280.05680087]
+ [  31.50782657    1.42794985  264.87186182]
+ [   0.5           0.41387162  145.90293107]
+ [   0.5           0.          148.51927415]]
+Fitness :  [[ 2382804.72826066]
+ [ 1087016.52608914]
+ [ 1389348.94485602]
+ [  803487.74729451]
+ [ 1364344.446855  ]
+ [ 1131864.21979566]]
+Parent Population 8  :  [[   0.5           0.          148.51927415]
+ [   0.5           0.          148.51927415]
+ [   0.5           0.          148.51927415]
+ [   0.5           0.          148.51927415]
+ [  31.50782657    1.42794985  264.87186182]
+ [  31.50782657    1.42794985  264.87186182]]
+Fitness :  [[ 1427540.0846884 ]
+ [ 3064480.91031548]
+ [  968736.80509961]
+ [ 1087016.52608914]
+ [  795631.56556666]
+ [ 1389348.94485602]]
+Mean:  [ 1455459.13943588]  Min:  [ 795631.56556666]
+Should query graph DB
+Offspring Population  8  :  [[  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  5.00000000e-01   0.00000000e+00   1.45939797e+02]
+ [  3.15078266e+01   1.42794985e+00   2.64871862e+02]
+ [  3.15078266e+01   1.42794985e+00   2.67325817e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 20:36:23.215451  ,  2017-12-11 21:01:23.215468
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4effd3eab8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  52.309723006  Interval:  25  Timestamp:  2017-12-11 20:51:23.875693  ,  2017-12-11 21:16:23.875711
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efcb1fbd8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb1f680>
+Connecting to MySQL database...
+connection established.
+1758219.14614
+[[ 2285684.8899809]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]
+ [ 1000000.       ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 21:15:55.025811  ,  2017-12-11 21:40:55.025829
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb1f248>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  52.309723006  Interval:  25  Timestamp:  2017-12-11 21:30:55.707126  ,  2017-12-11 21:55:55.707145
+<Response [200]> COOLING, Part 1, with ...  [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4bc680>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb1fc20>
+Connecting to MySQL database...
+connection established.
+419114.560142
+[[ 2285684.8899809 ]
+ [  419114.56014154]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 21:55:26.944678  ,  2017-12-11 22:20:26.944696
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9908>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  52.309723006  Interval:  25  Timestamp:  2017-12-11 22:10:27.512005  ,  2017-12-11 22:35:27.512024
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          148.51927415]
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1ea8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          148.51927415]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1a70>
+Connecting to MySQL database...
+connection established.
+1482057.83842
+[[ 2285684.8899809 ]
+ [  419114.56014154]
+ [ 1926675.18995028]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 22:34:58.841743  ,  2017-12-11 22:59:58.841761
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc518>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  52.309723006  Interval:  25  Timestamp:  2017-12-11 22:49:59.437232  ,  2017-12-11 23:14:59.437251
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          145.93979714]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7ab8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          145.93979714]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7c20>
+Connecting to MySQL database...
+connection established.
+1083950.27646
+[[ 2285684.8899809 ]
+ [  419114.56014154]
+ [ 1926675.18995028]
+ [ 1409135.35939897]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 23:14:30.682800  ,  2017-12-11 23:39:30.682818
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8950>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  52.309723006  Interval:  25  Timestamp:  2017-12-11 23:29:31.376382  ,  2017-12-11 23:54:31.376401
+<Response [200]> COOLING, Part 1, with ...  [  31.50782657    1.42794985  264.87186182]
+<ConfigParser.ConfigParser instance at 0x7f4efcb225a8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  31.50782657    1.42794985  264.87186182]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb22908>
+Connecting to MySQL database...
+connection established.
+1504597.32425
+[[ 2285684.8899809 ]
+ [  419114.56014154]
+ [ 1926675.18995028]
+ [ 1409135.35939897]
+ [ 1955976.52152983]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-11 23:54:02.509761  ,  2017-12-12 00:19:02.509779
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8fc8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  52.309723006  Interval:  25  Timestamp:  2017-12-12 00:09:03.142668  ,  2017-12-12 00:34:03.142688
+<Response [200]> COOLING, Part 1, with ...  [  31.50782657    1.42794985  267.32581653]
+<ConfigParser.ConfigParser instance at 0x7f4f0008ad40>
+Connecting to MySQL database...
+connection established.
+Offspring Population 8  :  [[  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  5.00000000e-01   0.00000000e+00   1.45939797e+02]
+ [  3.15078266e+01   1.42794985e+00   2.64871862e+02]
+ [  3.15078266e+01   1.42794985e+00   2.67325817e+02]]
+Fitness :  [[ 2285684.8899809 ]
+ [  419114.56014154]
+ [ 1926675.18995028]
+ [ 1409135.35939897]
+ [ 1955976.52152983]
+ [ 1000000.        ]]
+Parent Population 9  :  [[  5.00000000e-01   0.00000000e+00   1.45939797e+02]
+ [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+ [  5.00000000e-01   0.00000000e+00   1.48519274e+02]
+ [  3.15078266e+01   1.42794985e+00   2.67325817e+02]
+ [  3.15078266e+01   1.42794985e+00   2.67325817e+02]
+ [  3.15078266e+01   1.42794985e+00   2.64871862e+02]]
+Fitness :  [[ 1409135.35939897]
+ [  795631.56556666]
+ [ 3064480.91031548]
+ [ 1000000.        ]
+ [  968736.80509961]
+ [  795631.56556666]]
+Mean:  [ 1338936.03432456]  Min:  [ 795631.56556666]
+Offspring Population  9  :  [[  5.00000000e-01   0.00000000e+00   1.45939797e+02]
+ [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+ [  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  2.83056744e+01   1.42794985e+00   2.82531817e+02]
+ [  5.00000000e-01   1.42794985e+00   2.72000340e+02]
+ [  3.15078266e+01   1.49063278e+00   2.64871862e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 00:24:03.937547  ,  2017-12-12 00:49:03.937564
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb22248>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  51.8037550339  Interval:  25  Timestamp:  2017-12-12 00:39:04.575697  ,  2017-12-12 01:04:04.575716
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          145.93979714]
+<ConfigParser.ConfigParser instance at 0x7f4efcb16ea8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          145.93979714]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb16dd0>
+Connecting to MySQL database...
+connection established.
+908188.948611
+[[  908188.94861112]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 01:03:36.676168  ,  2017-12-12 01:28:36.676186
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4ccc68>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  51.8037550339  Interval:  25  Timestamp:  2017-12-12 01:18:37.278111  ,  2017-12-12 01:43:37.278130
+<Response [200]> COOLING, Part 1, with ...  [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efcb1f680>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4bcbd8>
+Connecting to MySQL database...
+connection established.
+2880107.36999
+[[  908188.94861112]
+ [ 2880107.36998568]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 01:43:08.658220  ,  2017-12-12 02:08:08.658238
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d11b8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  51.8037550339  Interval:  25  Timestamp:  2017-12-12 01:58:09.222672  ,  2017-12-12 02:23:09.222691
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          131.20188388]
+<ConfigParser.ConfigParser instance at 0x7f4efc4bcef0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          131.20188388]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4bc710>
+Connecting to MySQL database...
+connection established.
+1491544.34064
+[[  908188.94861112]
+ [ 2880107.36998568]
+ [ 1491544.34064323]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 02:22:40.420783  ,  2017-12-12 02:47:40.420801
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7e60>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  51.8037550339  Interval:  25  Timestamp:  2017-12-12 02:37:41.182913  ,  2017-12-12 03:02:41.182933
+<Response [200]> COOLING, Part 1, with ...  [  28.30567445    1.42794985  282.53181691]
+<ConfigParser.ConfigParser instance at 0x7f4efcb27f80>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  28.30567445    1.42794985  282.53181691]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb27368>
+Connecting to MySQL database...
+connection established.
+1870706.28657
+[[  908188.94861112]
+ [ 2880107.36998568]
+ [ 1491544.34064323]
+ [ 1870706.28657069]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 03:02:12.365339  ,  2017-12-12 03:27:12.365357
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9248>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  51.8037550339  Interval:  25  Timestamp:  2017-12-12 03:17:13.032497  ,  2017-12-12 03:42:13.032516
+<Response [200]> COOLING, Part 1, with ...  [   0.5           1.42794985  272.00034049]
+<ConfigParser.ConfigParser instance at 0x7f4efcb1f908>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           1.42794985  272.00034049]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efcb1f830>
+Connecting to MySQL database...
+connection established.
+2245063.25518
+[[  908188.94861112]
+ [ 2880107.36998568]
+ [ 1491544.34064323]
+ [ 1870706.28657069]
+ [ 2245063.25517587]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 03:41:44.238360  ,  2017-12-12 04:06:44.238378
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2a28>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  51.8037550339  Interval:  25  Timestamp:  2017-12-12 03:56:44.951222  ,  2017-12-12 04:21:44.951241
+<Response [200]> COOLING, Part 1, with ...  [  31.50782657    1.49063278  264.87186182]
+<ConfigParser.ConfigParser instance at 0x7f4efc4ccd88>
+Connecting to MySQL database...
+connection established.
+Offspring Population 9  :  [[  5.00000000e-01   0.00000000e+00   1.45939797e+02]
+ [  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+ [  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  2.83056744e+01   1.42794985e+00   2.82531817e+02]
+ [  5.00000000e-01   1.42794985e+00   2.72000340e+02]
+ [  3.15078266e+01   1.49063278e+00   2.64871862e+02]]
+Fitness :  [[  908188.94861112]
+ [ 2880107.36998568]
+ [ 1491544.34064323]
+ [ 1870706.28657069]
+ [ 2245063.25517587]
+ [ 1000000.        ]]
+Parent Population 10  :  [[  5.13000000e+00   2.10000000e-02   4.05000000e+02]
+ [  5.00000000e-01   0.00000000e+00   1.45939797e+02]
+ [  5.00000000e-01   1.42794985e+00   2.72000340e+02]
+ [  3.15078266e+01   1.49063278e+00   2.64871862e+02]
+ [  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  5.13000000e+00   2.10000000e-02   4.05000000e+02]]
+Fitness :  [[ 2880107.36998568]
+ [ 1000000.        ]
+ [ 3064480.91031548]
+ [ 1409135.35939897]
+ [  968736.80509961]
+ [  795631.56556666]]
+Mean:  [ 1686348.6683944]  Min:  [ 795631.56556666]
+Should query graph DB
+Offspring Population  10  :  [[  6.14890987e+00   2.10000000e-02   4.05000000e+02]
+ [  1.05252744e+00   0.00000000e+00   1.60167219e+02]
+ [  4.00121765e+00   1.42794985e+00   2.72000340e+02]
+ [  7.50000000e+00   3.00000000e-02   8.50000000e+01]
+ [  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  5.13000000e+00   2.10000000e-02   4.01214726e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 04:11:45.776928  ,  2017-12-12 04:36:45.776945
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4cc5f0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  52.4642615146  Interval:  25  Timestamp:  2017-12-12 04:26:46.446356  ,  2017-12-12 04:51:46.446375
+<Response [200]> COOLING, Part 1, with ...  [  6.14890987e+00   2.10000000e-02   4.05000000e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4cf7e8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  6.14890987e+00   2.10000000e-02   4.05000000e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4f00059c68>
+Connecting to MySQL database...
+connection established.
+2143530.91479
+[[ 2786590.18922963]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 04:51:17.676948  ,  2017-12-12 05:16:17.676966
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1cf8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  52.4642615146  Interval:  25  Timestamp:  2017-12-12 05:06:18.246647  ,  2017-12-12 05:31:18.246666
+<Response [200]> COOLING, Part 1, with ...  [   1.05252744    0.          160.16721898]
+<ConfigParser.ConfigParser instance at 0x7f4efc4da5a8>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   1.05252744    0.          160.16721898]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4da050>
+Connecting to MySQL database...
+connection established.
+2623391.67055
+[[ 2786590.18922963]
+ [ 2623391.67055069]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 05:30:49.614369  ,  2017-12-12 05:55:49.614387
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4baf38>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  52.4642615146  Interval:  25  Timestamp:  2017-12-12 05:45:50.189642  ,  2017-12-12 06:10:50.189661
+<Response [200]> COOLING, Part 1, with ...  [   4.00121765    1.42794985  272.00034049]
+<ConfigParser.ConfigParser instance at 0x7f4efcb165f0>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 06:00:51.184305  ,  2017-12-12 06:25:51.184362
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7368>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  52.4642615146  Interval:  25  Timestamp:  2017-12-12 06:15:51.749527  ,  2017-12-12 06:40:51.749545
+<Response [200]> COOLING, Part 1, with ...  [  7.50000000e+00   3.00000000e-02   8.50000000e+01]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2dd0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  7.50000000e+00   3.00000000e-02   8.50000000e+01]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2fc8>
+Connecting to MySQL database...
+connection established.
+2343625.4155
+[[ 2786590.18922963]
+ [ 2623391.67055069]
+ [ 1000000.        ]
+ [ 2343625.41549863]
+ [ 1000000.        ]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 06:40:22.931054  ,  2017-12-12 07:05:22.931072
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d2c20>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  52.4642615146  Interval:  25  Timestamp:  2017-12-12 06:55:23.640033  ,  2017-12-12 07:20:23.640052
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          131.20188388]
+<ConfigParser.ConfigParser instance at 0x7f4eff7f4cb0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          131.20188388]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d4518>
+Connecting to MySQL database...
+connection established.
+1900122.61871
+[[ 2786590.18922963]
+ [ 2623391.67055069]
+ [ 1000000.        ]
+ [ 2343625.41549863]
+ [ 1900122.61870652]
+ [ 1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 07:19:54.840488  ,  2017-12-12 07:44:54.840506
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4da710>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  52.4642615146  Interval:  25  Timestamp:  2017-12-12 07:34:55.546852  ,  2017-12-12 07:59:55.546871
+<Response [200]> COOLING, Part 1, with ...  [  5.13000000e+00   2.10000000e-02   4.01214726e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efcb16c68>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  5.13000000e+00   2.10000000e-02   4.01214726e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c19e0>
+Connecting to MySQL database...
+connection established.
+2400347.24466
+[[ 2786590.18922963]
+ [ 2623391.67055069]
+ [ 1000000.        ]
+ [ 2343625.41549863]
+ [ 1900122.61870652]
+ [ 3120451.41806044]]
+Offspring Population 10  :  [[  6.14890987e+00   2.10000000e-02   4.05000000e+02]
+ [  1.05252744e+00   0.00000000e+00   1.60167219e+02]
+ [  4.00121765e+00   1.42794985e+00   2.72000340e+02]
+ [  7.50000000e+00   3.00000000e-02   8.50000000e+01]
+ [  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  5.13000000e+00   2.10000000e-02   4.01214726e+02]]
+Fitness :  [[ 2786590.18922963]
+ [ 2623391.67055069]
+ [ 1000000.        ]
+ [ 2343625.41549863]
+ [ 1900122.61870652]
+ [ 3120451.41806044]]
+Parent Population 11  :  [[  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  1.05252744e+00   0.00000000e+00   1.60167219e+02]
+ [  5.00000000e-01   0.00000000e+00   1.31201884e+02]
+ [  1.05252744e+00   0.00000000e+00   1.60167219e+02]
+ [  5.13000000e+00   2.10000000e-02   4.01214726e+02]
+ [  4.00121765e+00   1.42794985e+00   2.72000340e+02]]
+Fitness :  [[  968736.80509961]
+ [ 1000000.        ]
+ [ 1900122.61870652]
+ [ 2623391.67055069]
+ [  795631.56556666]
+ [ 1000000.        ]]
+Mean:  [ 1381313.77665391]  Min:  [ 795631.56556666]
+Offspring Population  11  :  [[  1.07084373e+01   0.00000000e+00   1.31201884e+02]
+ [  1.05252744e+00   1.22620446e+00   1.60167219e+02]
+ [  5.00000000e-01   0.00000000e+00   1.34878231e+02]
+ [  1.05252744e+00   0.00000000e+00   1.53629848e+02]
+ [  5.13000000e+00   2.10000000e-02   4.17664371e+02]
+ [  4.00121765e+00   1.42794985e+00   3.07849541e+02]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 07:59:26.804405  ,  2017-12-12 08:24:26.804421
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c9b48>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  0  Setpoint:  51.4760521007  Interval:  25  Timestamp:  2017-12-12 08:14:27.375681  ,  2017-12-12 08:39:27.375700
+<Response [200]> COOLING, Part 1, with ...  [  10.70843732    0.          131.20188388]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d1b90>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  10.70843732    0.          131.20188388]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d8fc8>
+Connecting to MySQL database...
+connection established.
+35004785.1773
+[[ 35004785.17733579]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 08:38:58.752802  ,  2017-12-12 09:03:58.752820
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4f00059a28>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  1  Setpoint:  51.4760521007  Interval:  25  Timestamp:  2017-12-12 08:53:59.330165  ,  2017-12-12 09:18:59.330184
+<Response [200]> COOLING, Part 1, with ...  [   1.05252744    1.22620446  160.16721898]
+<ConfigParser.ConfigParser instance at 0x7f4f00059758>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   1.05252744    1.22620446  160.16721898]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1560>
+Connecting to MySQL database...
+connection established.
+2434825.65997
+[[ 35004785.17733579]
+ [  2434825.6599705 ]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 09:18:30.668148  ,  2017-12-12 09:43:30.668166
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4c1cf8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  2  Setpoint:  51.4760521007  Interval:  25  Timestamp:  2017-12-12 09:33:31.353508  ,  2017-12-12 09:58:31.353527
+<Response [200]> COOLING, Part 1, with ...  [   0.5           0.          134.87823096]
+<ConfigParser.ConfigParser instance at 0x7f4efc4b64d0>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   0.5           0.          134.87823096]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d14d0>
+Connecting to MySQL database...
+connection established.
+3341870.4706
+[[ 35004785.17733579]
+ [  2434825.6599705 ]
+ [  3341870.47060277]
+ [  1000000.        ]
+ [  1000000.        ]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 09:58:02.520929  ,  2017-12-12 10:23:02.520947
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4eff7f4b90>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  3  Setpoint:  51.4760521007  Interval:  25  Timestamp:  2017-12-12 10:13:03.168146  ,  2017-12-12 10:38:03.168165
+<Response [200]> COOLING, Part 1, with ...  [   1.05252744    0.          153.62984766]
+<ConfigParser.ConfigParser instance at 0x7f4effd3ea70>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   1.05252744    0.          153.62984766]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4da368>
+Connecting to MySQL database...
+connection established.
+2499011.17378
+[[ 35004785.17733579]
+ [  2434825.6599705 ]
+ [  3341870.47060277]
+ [  2499011.17377924]
+ [  1000000.        ]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 10:37:34.428109  ,  2017-12-12 11:02:34.428127
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efcb16c20>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  4  Setpoint:  51.4760521007  Interval:  25  Timestamp:  2017-12-12 10:52:35.003852  ,  2017-12-12 11:17:35.003871
+<Response [200]> COOLING, Part 1, with ...  [  5.13000000e+00   2.10000000e-02   4.17664371e+02]
+<ConfigParser.ConfigParser instance at 0x7f4efc4d7128>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [  5.13000000e+00   2.10000000e-02   4.17664371e+02]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4efc4d73b0>
+Connecting to MySQL database...
+connection established.
+863535.286443
+[[ 35004785.17733579]
+ [  2434825.6599705 ]
+ [  3341870.47060277]
+ [  2499011.17377924]
+ [   863535.28644301]
+ [  1000000.        ]]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  65  Interval:  25  Timestamp:  2017-12-12 11:17:06.246546  ,  2017-12-12 11:42:06.246564
+<Response [200]> HEATING,   0
+<ConfigParser.ConfigParser instance at 0x7f4efc4d75a8>
+Connecting to MySQL database...
+connection established.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Iteration:  5  Setpoint:  51.4760521007  Interval:  25  Timestamp:  2017-12-12 11:32:06.812359  ,  2017-12-12 11:57:06.812378
+<Response [200]> COOLING, Part 1, with ...  [   4.00121765    1.42794985  307.84954141]
+<ConfigParser.ConfigParser instance at 0x7f4effd3ea28>
+Connecting to MySQL database...
+connection established.
+<Response [200]> COOLING, Part 2, with ...  [   4.00121765    1.42794985  307.84954141]
+PAU Waiting
+<ConfigParser.ConfigParser instance at 0x7f4effd3eb48>
+Connecting to MySQL database...
+connection established.
+1859540.79899
+[[ 35004785.17733579]
+ [  2434825.6599705 ]
+ [  3341870.47060277]
+ [  2499011.17377924]
+ [   863535.28644301]
+ [  2417403.03868382]]
+Offspring Population 11  :  [[  1.07084373e+01   0.00000000e+00   1.31201884e+02]
+ [  1.05252744e+00   1.22620446e+00   1.60167219e+02]
+ [  5.00000000e-01   0.00000000e+00   1.34878231e+02]
+ [  1.05252744e+00   0.00000000e+00   1.53629848e+02]
+ [  5.13000000e+00   2.10000000e-02   4.17664371e+02]
+ [  4.00121765e+00   1.42794985e+00   3.07849541e+02]]
+Fitness :  [[ 35004785.17733579]
+ [  2434825.6599705 ]
+ [  3341870.47060277]
+ [  2499011.17377924]
+ [   863535.28644301]
+ [  2417403.03868382]]

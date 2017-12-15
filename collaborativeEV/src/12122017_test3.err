@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "EA_tuning.py", line 155, in <module>
+    run_EV()
+  File "EA_tuning.py", line 126, in run_EV
+    Jave[i] = np.mean(Jparent)
+IndexError: index 8 is out of bounds for axis 0 with size 8

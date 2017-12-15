@@ -1,0 +1,11 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "EA_tuning.py", line 155, in <module>
+    run_EV()
+  File "EA_tuning.py", line 80, in run_EV
+    Jparent = evfit.run_eval()
+  File "/home/hsmidt/ev/ec/collaborativeEV/src/evUtils.py", line 171, in run_eval
+    pause.until(datetime.datetime.now() + datetime.timedelta(minutes=(self.ctrl_interval[1])))
+  File "/usr/local/lib/python2.7/dist-packages/pause/__init__.py", line 81, in until
+    sleep(1)
+KeyboardInterrupt

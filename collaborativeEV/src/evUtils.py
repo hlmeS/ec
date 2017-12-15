@@ -48,8 +48,8 @@ class ev_fitness:
         # placeholder for fitness values
         self.k = sum(x < 0 for x in np.diff(ctrl_temps))
         self.m = len(population)
-        self.J = 1e6*np.ones((self.m,self.k))
-        self.J_ave = 1e6*np.ones((self.m, 1))
+        self.J = 1e9*np.ones((self.m,self.k))
+        self.J_ave = 1e9*np.ones((self.m, 1))
         #J = np.concatenate((pop[:,0].reshape(psize,1), np.zeros((psize,1))), axis = 1)
         self.j_weights = fit_weights
 
@@ -137,7 +137,7 @@ class ev_fitness:
         al, power, energy]
         """
         #self.J[i,k] = self.j_weights[0] * self.energy_calc(simout) + self.j_weights[1] * abs(self.iae_calc(simout) ) #+ self.j_weights[2] * 0.01* self.itae_calc(simout)
-        self.J[i,k] = abs(0.6 * self.iae_calc(simout) + 0.2 * self.itae_calc(simout) + 0.2 * self.ise_calc(simout))
+        self.J[i,k] = 1.0 * (abs(0.2 * self.iae_calc(simout) + 0.8 * self.itae_calc(simout))) + 0.005 * self.energy_calc(simout)
 
 
     def run_eval(self):
@@ -184,8 +184,8 @@ class ev_fitness:
 
                     # break if we don't get to the temperature within half the time at least
                     #if not 0.95*temp < np.mea n(simout[:, 2]) < 1.08*temp :
-                    if sum( 0.97*temp > y for y in simout[:,2]) > 5 :
-                        self.J_ave[i] = 1e9
+                    if sum( 0.96*temp > y for y in simout[:,2]) > 5 :
+                        self.J_ave[i] = 1000000000
                         break
 
                     if self.debug: print resp, "COOLING, Part 2, with ... ", self.population[i,:]
@@ -250,13 +250,13 @@ class ev_operators:
         # variation operators
         #self.recomb_rate = 0.5
         self.mut_rate = 0.35                # 0.35
-        self.recomb_rate = 0.2              # 0.4
+        self.recomb_rate = 0.3             # 0.4
         self.mut_oper = "cauchy"
         self.mut_gauss_step = 4
 
 
         #0.5 < kp < 20 , 0.5 < ki < 10 , 0 < kd < 10 ?
-        self.gain_limits = np.array([[0.5, 50], [0.0, 0.05], [0.5, 1000.0]])
+        self.gain_limits = np.array([[0.5, 60], [0.0, 1.0], [100, 1000.0]])
         #self.alpha = 1.0self.recomb_rate
 
         self.fit_weights = [0.2, 0.8] #, 0.1]    # energy & error
@@ -347,6 +347,7 @@ class ev_operators:
                     elif self.mut_oper == "cauchy" :
                         dist = 5*float(np.random.standard_cauchy(1))
                         if j == 1: pop[i,j] +=  dist / 10
+			elif j == 2: pop[i,j] += dist * 10
                         else: pop[i,j] += dist
 
                 if pop[i,j] > self.gain_limits[j, 1]:
